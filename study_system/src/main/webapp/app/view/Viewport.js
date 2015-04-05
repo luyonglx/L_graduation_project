@@ -1,56 +1,142 @@
 /**
  * Created by LUYONG on 2015/1/8.
  */
-Ext.define("StudyOnLine.view.Viewport",{
-      extend:'Ext.container.Viewport',
-      layout:'border',
-      items:[
-          {
-              region:'north',
-             html:'<h1 style="text-align: center">L学习</h1>',
-              height:80
-          },
-          {
-              region:'west',
-              width:200,
-              title:'菜单管理',
-              split:true,
-              items:[
-                     {
-                    	 xtype:'button',
-                    	 text:'确定',
-                    	 handler:function()
-                    	 {
-                    		 Ext.create('Ext.window.Window',{
-                    			 width:300,
-                    			 height:250
-                    		 }).show();
-                    	 }
-                     }]
-              //xtype:'menuview'
-          }
-          ,{
-              region:'center',
-              //title:'内容展示',
-              xtype:'tabpanel',
+Ext
+		.define(
+				"StudyOnLine.view.Viewport",
+				{
+					extend : 'Ext.container.Viewport',
+					layout : 'border',
+					items : [
+							{
+								//xtype: 'appnavi',
+								 region : 'west',
+								 layout: 'accordion',
+								    width: 230,
+								    split: true,
+								    collapsed: true,
+								    collapsible: true,
+								    title: 'System Main Menu',
+								    defaults: {
+								        autoScroll: true,
+								        layout: {
+								            type: 'vbox',
+								            pack: 'start',
+								            align: 'stretch'
+								        },
+								        defaults: {
+								            xtype: 'button',
+								            width: 50,
+								            height: 30,
+								            margins: '10 5 10 5'
+								        }
+								    },
+								    items: [
+								        {
+								        	xtype: 'panel',
+								        	title: 'Grid Example List',
+								        	items: [
+								                {
+								                	text: 'Simple Grid'
+								                },
+								                {
+								                	text: 'Local Grid'
+								                },
+								                {
+								                	text: 'Mutil Grid'
+								                },
+								                {
+								                	text: 'Change Grid'
+								                }
+								        	]
+								        },
+								        {
+								        	xtype: 'panel',
+								        	title: 'Tree Example List',
+								        	items: [
+								                {
+								                	text: 'Tree Grid'
+								                },
+								                {
+								                	text: 'Tree Drop'
+								                },
+								                {
+								                	text: 'Tree Node'
+								                },
+								                {
+								                	text: 'Tree Mutil'
+								                }
+								        	]
+								        },
+								        {
+								        	xtype: 'panel',
+								        	title: 'Chart Example List',
+								        	items: [
+								                {
+								                	text: 'Pie Chart'
+								                },
+								                {
+								                	text: '3D Chart'
+								                },
+								                {
+								                	text: 'Line Chart'
+								                },
+								                {
+								                	text: 'Cube Chart'
+								                }
+								        	]
+								        }
+								    ]
 
-              //id:'mainContent',
-              items:[
-                  {
-                      title:'欢迎',
-                      html:'<h1>欢迎使用L学习系统</h1>'
-                  }
-              ]
+							},
+							{
+								region : 'center',
+								xtype : 'tabpanel',
+								layout : {
+									type : 'fit',
 
-          },
-          {
-        	  region:'south',
-        	  html:'版权@L',
-        	  height:20
-          }
+								},
+								items : [
+										{
+											html : '<h2>Thie Page for the Application Start.</h2>'
+										}, {
+											title : 'Test Grid',
+											items : [ {
+												xtype : 'grid',
+												// title: 'Person Grid
+												// DataView',
+												height : 300,
+												
 
+											} ]
+										}, {
+											title : 'Log In',
+											items : [ {
+												xtype : 'panel',
+												items : [ {
+													xtype : 'textfield',
+													fieldLabel : 'LoginName'
+												}, {
+													xtype : 'textfield',
+													fieldLabel : 'PassWord'
+												}, {
+													xtype : 'numberfield',
+													fieldLabel : 'SubmitNo'
+												} ]
+											} ]
+										} ]
+							},
+							{
+								xtype : 'panel',
+								region : 'north',
+								height : 50,
+								html : '<div style="background-color:#804b65; font-size:30px; height:45px; line-height: 40px; padding-left: 20px;">L学习</div>'
+							}, {
+								xtype : 'toolbar',
+								region : 'south',
+								ui : 'footer',
+								margin : '7 0 0 0',
+								items : [ '就绪', '->', '&copy; 2014 浙江工业大学' ]
+							} ]
 
-
-      ]
-
-});
+				});
