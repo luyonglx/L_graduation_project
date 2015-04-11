@@ -40,8 +40,29 @@
 			domainObjectName="Users">
 		</table> -->
 		
-		 <table tableName="subjects"
-			domainObjectName="Subjects">
-		</table> 
+		
+		<!--  <table tableName="address" domainObjectName="Address"> </table> 
+		 <table tableName="answer_sheet" domainObjectName="AnswerSheet"> </table> 
+		 <table tableName="big_question_result" domainObjectName="BigQuestionResult"> </table> 
+		 <table tableName="city" domainObjectName="City"> </table> 
+		 <table tableName="comments" domainObjectName="Comments"> </table> 
+		 
+		 <table tableName="exam_paper" domainObjectName="ExamPaper"> </table> 
+		 <table tableName="exam_paper_to_questions"></table> 
+		 <table tableName="subjects"> </table> 
+		 <table tableName="files"> </table> 
+		 <table tableName="grade" > </table> 
+		 
+		 <table tableName="item_file" > </table> 
+		 <table tableName="my_download" > </table> 
+		 <table tableName="province" > </table> 
+		 <table tableName="question_choose" > </table> 
+		 <table tableName="questions" > </table> 
+		 <table tableName="section" > </table> -->
+		
+		 <table tableName="users" > </table>
+		   
+		
+		
 	</context>
 </generatorConfiguration>

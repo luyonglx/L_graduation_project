@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduation.pro.study_system.mapper.MyDownloadMapper" >
+  <resultMap id="BaseResultMap" type="com.graduation.pro.study_system.pojo.MyDownload" >
+    <id column="download_id" property="downloadId" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="item_file_Id" property="itemFileId" jdbcType="INTEGER" />
+    <result column="download_time" property="downloadTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    download_id, userid, item_file_Id, download_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.graduation.pro.study_system.pojo.MyDownloadExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from my_download
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="page != null" >
+      limit #{page.begin} , #{page.length}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from my_download
+    where download_id = #{downloadId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from my_download
+    where download_id = #{downloadId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.graduation.pro.study_system.pojo.MyDownloadExample" >
+    delete from my_download
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.MyDownload" >
+    insert into my_download (download_id, userid, item_file_Id, 
+      download_time)
+    values (#{downloadId,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{itemFileId,jdbcType=INTEGER}, 
+      #{downloadTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.MyDownload" >
+    insert into my_download
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="downloadId != null" >
+        download_id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="itemFileId != null" >
+        item_file_Id,
+      </if>
+      <if test="downloadTime != null" >
+        download_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="downloadId != null" >
+        #{downloadId,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="itemFileId != null" >
+        #{itemFileId,jdbcType=INTEGER},
+      </if>
+      <if test="downloadTime != null" >
+        #{downloadTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.graduation.pro.study_system.pojo.MyDownloadExample" resultType="java.lang.Integer" >
+    select count(*) from my_download
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update my_download
+    <set >
+      <if test="record.downloadId != null" >
+        download_id = #{record.downloadId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userid != null" >
+        userid = #{record.userid,jdbcType=INTEGER},
+      </if>
+      <if test="record.itemFileId != null" >
+        item_file_Id = #{record.itemFileId,jdbcType=INTEGER},
+      </if>
+      <if test="record.downloadTime != null" >
+        download_time = #{record.downloadTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update my_download
+    set download_id = #{record.downloadId,jdbcType=INTEGER},
+      userid = #{record.userid,jdbcType=INTEGER},
+      item_file_Id = #{record.itemFileId,jdbcType=INTEGER},
+      download_time = #{record.downloadTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.graduation.pro.study_system.pojo.MyDownload" >
+    update my_download
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="itemFileId != null" >
+        item_file_Id = #{itemFileId,jdbcType=INTEGER},
+      </if>
+      <if test="downloadTime != null" >
+        download_time = #{downloadTime,jdbcType=DATE},
+      </if>
+    </set>
+    where download_id = #{downloadId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.graduation.pro.study_system.pojo.MyDownload" >
+    update my_download
+    set userid = #{userid,jdbcType=INTEGER},
+      item_file_Id = #{itemFileId,jdbcType=INTEGER},
+      download_time = #{downloadTime,jdbcType=DATE}
+    where download_id = #{downloadId,jdbcType=INTEGER}
+  </update>
+</mapper>
