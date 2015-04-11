@@ -15,8 +15,7 @@ Ext.onReady(function(){
         //指定配置选项，设置相应的路径
         appFolder: 'app',
         //加载控制器
-       // controllers:['CrawlerController','taskManageController','commodityTypeController',
-        //    'keyWordManageController','taskExecuteManageController'],
+        controllers:['MainController'],
         //自动加载和实例化Viewport文件
         autoCreateViewport: true
     });

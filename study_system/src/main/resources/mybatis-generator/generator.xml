@@ -7,6 +7,7 @@
 		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<plugin type="com.graduation.pro.study_system.util.MySQLPaginationPlugin" />
 		
 		
 		<commentGenerator>
@@ -15,7 +16,7 @@
 		</commentGenerator>
 		<!-- oracle URL、username、password -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/study-system" 
+			connectionURL="jdbc:mysql://localhost:3306/e-learning" 
 			userId="root" password="admin">
 		</jdbcConnection>
 		<javaTypeResolver>
@@ -35,8 +36,12 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- table name,  change tableName and domainObjectName  -->
-		<table tableName="Users"
+		<!-- <table tableName="Users"
 			domainObjectName="Users">
-		</table>
+		</table> -->
+		
+		 <table tableName="subjects"
+			domainObjectName="Subjects">
+		</table> 
 	</context>
 </generatorConfiguration>
