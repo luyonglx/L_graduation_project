@@ -5,7 +5,7 @@
     <id column="file_id" property="fileId" jdbcType="INTEGER" />
     <result column="file_name" property="fileName" jdbcType="VARCHAR" />
     <result column="file_path" property="filePath" jdbcType="VARCHAR" />
-    <result column="Save_time" property="saveTime" jdbcType="DATE" />
+    <result column="Save_time" property="saveTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -105,7 +105,7 @@
     insert into files (file_id, file_name, file_path, 
       Save_time)
     values (#{fileId,jdbcType=INTEGER}, #{fileName,jdbcType=VARCHAR}, #{filePath,jdbcType=VARCHAR}, 
-      #{saveTime,jdbcType=DATE})
+      #{saveTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.Files" >
     insert into files
@@ -134,7 +134,7 @@
         #{filePath,jdbcType=VARCHAR},
       </if>
       <if test="saveTime != null" >
-        #{saveTime,jdbcType=DATE},
+        #{saveTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -157,7 +157,7 @@
         file_path = #{record.filePath,jdbcType=VARCHAR},
       </if>
       <if test="record.saveTime != null" >
-        Save_time = #{record.saveTime,jdbcType=DATE},
+        Save_time = #{record.saveTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -169,7 +169,7 @@
     set file_id = #{record.fileId,jdbcType=INTEGER},
       file_name = #{record.fileName,jdbcType=VARCHAR},
       file_path = #{record.filePath,jdbcType=VARCHAR},
-      Save_time = #{record.saveTime,jdbcType=DATE}
+      Save_time = #{record.saveTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -184,7 +184,7 @@
         file_path = #{filePath,jdbcType=VARCHAR},
       </if>
       <if test="saveTime != null" >
-        Save_time = #{saveTime,jdbcType=DATE},
+        Save_time = #{saveTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where file_id = #{fileId,jdbcType=INTEGER}
@@ -193,7 +193,7 @@
     update files
     set file_name = #{fileName,jdbcType=VARCHAR},
       file_path = #{filePath,jdbcType=VARCHAR},
-      Save_time = #{saveTime,jdbcType=DATE}
+      Save_time = #{saveTime,jdbcType=TIMESTAMP}
     where file_id = #{fileId,jdbcType=INTEGER}
   </update>
 </mapper>

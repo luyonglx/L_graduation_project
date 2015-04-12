@@ -5,6 +5,7 @@
     <id column="result_id" property="resultId" jdbcType="INTEGER" />
     <result column="question_id" property="questionId" jdbcType="INTEGER" />
     <result column="result_desc" property="resultDesc" jdbcType="VARCHAR" />
+    <result column="exam_time" property="examTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -65,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    result_id, question_id, result_desc
+    result_id, question_id, result_desc, exam_time
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.graduation.pro.study_system.pojo.BigQuestionResultExample" >
     select
@@ -101,10 +102,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.BigQuestionResult" >
-    insert into big_question_result (result_id, question_id, result_desc
-      )
-    values (#{resultId,jdbcType=INTEGER}, #{questionId,jdbcType=INTEGER}, #{resultDesc,jdbcType=VARCHAR}
-      )
+    insert into big_question_result (result_id, question_id, result_desc, 
+      exam_time)
+    values (#{resultId,jdbcType=INTEGER}, #{questionId,jdbcType=INTEGER}, #{resultDesc,jdbcType=VARCHAR}, 
+      #{examTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.BigQuestionResult" >
     insert into big_question_result
@@ -118,6 +119,9 @@
       <if test="resultDesc != null" >
         result_desc,
       </if>
+      <if test="examTime != null" >
+        exam_time,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="resultId != null" >
@@ -128,6 +132,9 @@
       </if>
       <if test="resultDesc != null" >
         #{resultDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="examTime != null" >
+        #{examTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -149,6 +156,9 @@
       <if test="record.resultDesc != null" >
         result_desc = #{record.resultDesc,jdbcType=VARCHAR},
       </if>
+      <if test="record.examTime != null" >
+        exam_time = #{record.examTime,jdbcType=TIMESTAMP},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -158,7 +168,8 @@
     update big_question_result
     set result_id = #{record.resultId,jdbcType=INTEGER},
       question_id = #{record.questionId,jdbcType=INTEGER},
-      result_desc = #{record.resultDesc,jdbcType=VARCHAR}
+      result_desc = #{record.resultDesc,jdbcType=VARCHAR},
+      exam_time = #{record.examTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -172,13 +183,17 @@
       <if test="resultDesc != null" >
         result_desc = #{resultDesc,jdbcType=VARCHAR},
       </if>
+      <if test="examTime != null" >
+        exam_time = #{examTime,jdbcType=TIMESTAMP},
+      </if>
     </set>
     where result_id = #{resultId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.graduation.pro.study_system.pojo.BigQuestionResult" >
     update big_question_result
     set question_id = #{questionId,jdbcType=INTEGER},
-      result_desc = #{resultDesc,jdbcType=VARCHAR}
+      result_desc = #{resultDesc,jdbcType=VARCHAR},
+      exam_time = #{examTime,jdbcType=TIMESTAMP}
     where result_id = #{resultId,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -12,6 +12,8 @@ public class ItemFile implements Serializable {
 
     private Integer fileId;
 
+    private Integer sectionId;
+
     private String itemFileName;
 
     private Integer viewCount;
@@ -25,8 +27,6 @@ public class ItemFile implements Serializable {
     private Integer downloadPrice;
 
     private Date enteringDate;
-
-    private Integer sectionId;
 
     private static final long serialVersionUID = 1L;
 
@@ -60,6 +60,14 @@ public class ItemFile implements Serializable {
 
     public void setFileId(Integer fileId) {
         this.fileId = fileId;
+    }
+
+    public Integer getSectionId() {
+        return sectionId;
+    }
+
+    public void setSectionId(Integer sectionId) {
+        this.sectionId = sectionId;
     }
 
     public String getItemFileName() {
@@ -118,14 +126,6 @@ public class ItemFile implements Serializable {
         this.enteringDate = enteringDate;
     }
 
-    public Integer getSectionId() {
-        return sectionId;
-    }
-
-    public void setSectionId(Integer sectionId) {
-        this.sectionId = sectionId;
-    }
-
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -142,14 +142,14 @@ public class ItemFile implements Serializable {
             && (this.getGradeId() == null ? other.getGradeId() == null : this.getGradeId().equals(other.getGradeId()))
             && (this.getSubjectId() == null ? other.getSubjectId() == null : this.getSubjectId().equals(other.getSubjectId()))
             && (this.getFileId() == null ? other.getFileId() == null : this.getFileId().equals(other.getFileId()))
+            && (this.getSectionId() == null ? other.getSectionId() == null : this.getSectionId().equals(other.getSectionId()))
             && (this.getItemFileName() == null ? other.getItemFileName() == null : this.getItemFileName().equals(other.getItemFileName()))
             && (this.getViewCount() == null ? other.getViewCount() == null : this.getViewCount().equals(other.getViewCount()))
             && (this.getEvaluate() == null ? other.getEvaluate() == null : this.getEvaluate().equals(other.getEvaluate()))
             && (this.getResourceFrom() == null ? other.getResourceFrom() == null : this.getResourceFrom().equals(other.getResourceFrom()))
             && (this.getAuthor() == null ? other.getAuthor() == null : this.getAuthor().equals(other.getAuthor()))
             && (this.getDownloadPrice() == null ? other.getDownloadPrice() == null : this.getDownloadPrice().equals(other.getDownloadPrice()))
-            && (this.getEnteringDate() == null ? other.getEnteringDate() == null : this.getEnteringDate().equals(other.getEnteringDate()))
-            && (this.getSectionId() == null ? other.getSectionId() == null : this.getSectionId().equals(other.getSectionId()));
+            && (this.getEnteringDate() == null ? other.getEnteringDate() == null : this.getEnteringDate().equals(other.getEnteringDate()));
     }
 
     @Override
@@ -160,6 +160,7 @@ public class ItemFile implements Serializable {
         result = prime * result + ((getGradeId() == null) ? 0 : getGradeId().hashCode());
         result = prime * result + ((getSubjectId() == null) ? 0 : getSubjectId().hashCode());
         result = prime * result + ((getFileId() == null) ? 0 : getFileId().hashCode());
+        result = prime * result + ((getSectionId() == null) ? 0 : getSectionId().hashCode());
         result = prime * result + ((getItemFileName() == null) ? 0 : getItemFileName().hashCode());
         result = prime * result + ((getViewCount() == null) ? 0 : getViewCount().hashCode());
         result = prime * result + ((getEvaluate() == null) ? 0 : getEvaluate().hashCode());
@@ -167,7 +168,6 @@ public class ItemFile implements Serializable {
         result = prime * result + ((getAuthor() == null) ? 0 : getAuthor().hashCode());
         result = prime * result + ((getDownloadPrice() == null) ? 0 : getDownloadPrice().hashCode());
         result = prime * result + ((getEnteringDate() == null) ? 0 : getEnteringDate().hashCode());
-        result = prime * result + ((getSectionId() == null) ? 0 : getSectionId().hashCode());
         return result;
     }
 }

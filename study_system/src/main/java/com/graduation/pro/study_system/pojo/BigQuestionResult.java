@@ -1,6 +1,7 @@
 package com.graduation.pro.study_system.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class BigQuestionResult implements Serializable {
     private Integer resultId;
@@ -8,6 +9,8 @@ public class BigQuestionResult implements Serializable {
     private Integer questionId;
 
     private String resultDesc;
+
+    private Date examTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -35,6 +38,14 @@ public class BigQuestionResult implements Serializable {
         this.resultDesc = resultDesc == null ? null : resultDesc.trim();
     }
 
+    public Date getExamTime() {
+        return examTime;
+    }
+
+    public void setExamTime(Date examTime) {
+        this.examTime = examTime;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -49,7 +60,8 @@ public class BigQuestionResult implements Serializable {
         BigQuestionResult other = (BigQuestionResult) that;
         return (this.getResultId() == null ? other.getResultId() == null : this.getResultId().equals(other.getResultId()))
             && (this.getQuestionId() == null ? other.getQuestionId() == null : this.getQuestionId().equals(other.getQuestionId()))
-            && (this.getResultDesc() == null ? other.getResultDesc() == null : this.getResultDesc().equals(other.getResultDesc()));
+            && (this.getResultDesc() == null ? other.getResultDesc() == null : this.getResultDesc().equals(other.getResultDesc()))
+            && (this.getExamTime() == null ? other.getExamTime() == null : this.getExamTime().equals(other.getExamTime()));
     }
 
     @Override
@@ -59,6 +71,7 @@ public class BigQuestionResult implements Serializable {
         result = prime * result + ((getResultId() == null) ? 0 : getResultId().hashCode());
         result = prime * result + ((getQuestionId() == null) ? 0 : getQuestionId().hashCode());
         result = prime * result + ((getResultDesc() == null) ? 0 : getResultDesc().hashCode());
+        result = prime * result + ((getExamTime() == null) ? 0 : getExamTime().hashCode());
         return result;
     }
 }

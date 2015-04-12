@@ -3,7 +3,6 @@ package com.graduation.pro.study_system.pojo;
 import com.graduation.pro.study_system.util.Page;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class AnswerSheetExample {
@@ -115,32 +114,6 @@ public class AnswerSheetExample {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
             criteria.add(new Criterion(condition, value1, value2));
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
-            if (value == null) {
-                throw new RuntimeException("Value for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value.getTime()), property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
-            if (values == null || values.size() == 0) {
-                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
-            }
-            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                dateList.add(new java.sql.Date(iter.next().getTime()));
-            }
-            addCriterion(condition, dateList, property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
-            if (value1 == null || value2 == null) {
-                throw new RuntimeException("Between values for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
         }
 
         public Criteria andAnswerSheetIdIsNull() {
@@ -334,52 +307,52 @@ public class AnswerSheetExample {
         }
 
         public Criteria andExamTimeEqualTo(Date value) {
-            addCriterionForJDBCDate("Exam_time =", value, "examTime");
+            addCriterion("Exam_time =", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeNotEqualTo(Date value) {
-            addCriterionForJDBCDate("Exam_time <>", value, "examTime");
+            addCriterion("Exam_time <>", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeGreaterThan(Date value) {
-            addCriterionForJDBCDate("Exam_time >", value, "examTime");
+            addCriterion("Exam_time >", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("Exam_time >=", value, "examTime");
+            addCriterion("Exam_time >=", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeLessThan(Date value) {
-            addCriterionForJDBCDate("Exam_time <", value, "examTime");
+            addCriterion("Exam_time <", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("Exam_time <=", value, "examTime");
+            addCriterion("Exam_time <=", value, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeIn(List<Date> values) {
-            addCriterionForJDBCDate("Exam_time in", values, "examTime");
+            addCriterion("Exam_time in", values, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeNotIn(List<Date> values) {
-            addCriterionForJDBCDate("Exam_time not in", values, "examTime");
+            addCriterion("Exam_time not in", values, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("Exam_time between", value1, value2, "examTime");
+            addCriterion("Exam_time between", value1, value2, "examTime");
             return (Criteria) this;
         }
 
         public Criteria andExamTimeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("Exam_time not between", value1, value2, "examTime");
+            addCriterion("Exam_time not between", value1, value2, "examTime");
             return (Criteria) this;
         }
 

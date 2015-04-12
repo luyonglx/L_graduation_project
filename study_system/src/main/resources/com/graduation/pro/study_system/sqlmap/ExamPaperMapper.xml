@@ -6,7 +6,7 @@
     <result column="Creator" property="creator" jdbcType="VARCHAR" />
     <result column="Value_Rate" property="valueRate" jdbcType="REAL" />
     <result column="Examed_Count" property="examedCount" jdbcType="INTEGER" />
-    <result column="Create_time" property="createTime" jdbcType="DATE" />
+    <result column="Create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="Exam_paper_name" property="examPaperName" jdbcType="VARCHAR" />
     <result column="limit_time" property="limitTime" jdbcType="INTEGER" />
   </resultMap>
@@ -109,7 +109,7 @@
       Examed_Count, Create_time, Exam_paper_name, 
       limit_time)
     values (#{examPaperId,jdbcType=INTEGER}, #{creator,jdbcType=VARCHAR}, #{valueRate,jdbcType=REAL}, 
-      #{examedCount,jdbcType=INTEGER}, #{createTime,jdbcType=DATE}, #{examPaperName,jdbcType=VARCHAR}, 
+      #{examedCount,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{examPaperName,jdbcType=VARCHAR}, 
       #{limitTime,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.ExamPaper" >
@@ -151,7 +151,7 @@
         #{examedCount,jdbcType=INTEGER},
       </if>
       <if test="createTime != null" >
-        #{createTime,jdbcType=DATE},
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="examPaperName != null" >
         #{examPaperName,jdbcType=VARCHAR},
@@ -183,7 +183,7 @@
         Examed_Count = #{record.examedCount,jdbcType=INTEGER},
       </if>
       <if test="record.createTime != null" >
-        Create_time = #{record.createTime,jdbcType=DATE},
+        Create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.examPaperName != null" >
         Exam_paper_name = #{record.examPaperName,jdbcType=VARCHAR},
@@ -202,7 +202,7 @@
       Creator = #{record.creator,jdbcType=VARCHAR},
       Value_Rate = #{record.valueRate,jdbcType=REAL},
       Examed_Count = #{record.examedCount,jdbcType=INTEGER},
-      Create_time = #{record.createTime,jdbcType=DATE},
+      Create_time = #{record.createTime,jdbcType=TIMESTAMP},
       Exam_paper_name = #{record.examPaperName,jdbcType=VARCHAR},
       limit_time = #{record.limitTime,jdbcType=INTEGER}
     <if test="_parameter != null" >
@@ -222,7 +222,7 @@
         Examed_Count = #{examedCount,jdbcType=INTEGER},
       </if>
       <if test="createTime != null" >
-        Create_time = #{createTime,jdbcType=DATE},
+        Create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="examPaperName != null" >
         Exam_paper_name = #{examPaperName,jdbcType=VARCHAR},
@@ -238,7 +238,7 @@
     set Creator = #{creator,jdbcType=VARCHAR},
       Value_Rate = #{valueRate,jdbcType=REAL},
       Examed_Count = #{examedCount,jdbcType=INTEGER},
-      Create_time = #{createTime,jdbcType=DATE},
+      Create_time = #{createTime,jdbcType=TIMESTAMP},
       Exam_paper_name = #{examPaperName,jdbcType=VARCHAR},
       limit_time = #{limitTime,jdbcType=INTEGER}
     where Exam_paper_id = #{examPaperId,jdbcType=INTEGER}

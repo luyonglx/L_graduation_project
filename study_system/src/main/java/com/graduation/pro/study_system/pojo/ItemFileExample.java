@@ -383,6 +383,66 @@ public class ItemFileExample {
             return (Criteria) this;
         }
 
+        public Criteria andSectionIdIsNull() {
+            addCriterion("section_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdIsNotNull() {
+            addCriterion("section_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdEqualTo(Integer value) {
+            addCriterion("section_id =", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdNotEqualTo(Integer value) {
+            addCriterion("section_id <>", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdGreaterThan(Integer value) {
+            addCriterion("section_id >", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("section_id >=", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdLessThan(Integer value) {
+            addCriterion("section_id <", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdLessThanOrEqualTo(Integer value) {
+            addCriterion("section_id <=", value, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdIn(List<Integer> values) {
+            addCriterion("section_id in", values, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdNotIn(List<Integer> values) {
+            addCriterion("section_id not in", values, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdBetween(Integer value1, Integer value2) {
+            addCriterion("section_id between", value1, value2, "sectionId");
+            return (Criteria) this;
+        }
+
+        public Criteria andSectionIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("section_id not between", value1, value2, "sectionId");
+            return (Criteria) this;
+        }
+
         public Criteria andItemFileNameIsNull() {
             addCriterion("item_file_name is null");
             return (Criteria) this;
@@ -830,66 +890,6 @@ public class ItemFileExample {
 
         public Criteria andEnteringDateNotBetween(Date value1, Date value2) {
             addCriterionForJDBCDate("entering_date not between", value1, value2, "enteringDate");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdIsNull() {
-            addCriterion("section_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdIsNotNull() {
-            addCriterion("section_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdEqualTo(Integer value) {
-            addCriterion("section_id =", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdNotEqualTo(Integer value) {
-            addCriterion("section_id <>", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdGreaterThan(Integer value) {
-            addCriterion("section_id >", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("section_id >=", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdLessThan(Integer value) {
-            addCriterion("section_id <", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdLessThanOrEqualTo(Integer value) {
-            addCriterion("section_id <=", value, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdIn(List<Integer> values) {
-            addCriterion("section_id in", values, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdNotIn(List<Integer> values) {
-            addCriterion("section_id not in", values, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdBetween(Integer value1, Integer value2) {
-            addCriterion("section_id between", value1, value2, "sectionId");
-            return (Criteria) this;
-        }
-
-        public Criteria andSectionIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("section_id not between", value1, value2, "sectionId");
             return (Criteria) this;
         }
     }

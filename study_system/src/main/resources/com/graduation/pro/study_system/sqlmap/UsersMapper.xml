@@ -13,7 +13,7 @@
     <result column="phone" property="phone" jdbcType="VARCHAR" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="school" property="school" jdbcType="VARCHAR" />
-    <result column="register_time" property="registerTime" jdbcType="DATE" />
+    <result column="register_time" property="registerTime" jdbcType="TIMESTAMP" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="gold" property="gold" jdbcType="INTEGER" />
   </resultMap>
@@ -112,7 +112,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.Users" >
+  <insert id="insert" useGeneratedKeys="true" keyProperty="userId" parameterType="com.graduation.pro.study_system.pojo.Users" >
     insert into users (user_id, address_Id, grade_Id, 
       username, level, sex, 
       age, QQ, phone, email, 
@@ -121,7 +121,7 @@
     values (#{userId,jdbcType=INTEGER}, #{addressId,jdbcType=INTEGER}, #{gradeId,jdbcType=INTEGER}, 
       #{username,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER}, 
       #{age,jdbcType=INTEGER}, #{qq,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
-      #{school,jdbcType=VARCHAR}, #{registerTime,jdbcType=DATE}, #{password,jdbcType=VARCHAR}, 
+      #{school,jdbcType=VARCHAR}, #{registerTime,jdbcType=TIMESTAMP}, #{password,jdbcType=VARCHAR}, 
       #{gold,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.Users" >
@@ -205,7 +205,7 @@
         #{school,jdbcType=VARCHAR},
       </if>
       <if test="registerTime != null" >
-        #{registerTime,jdbcType=DATE},
+        #{registerTime,jdbcType=TIMESTAMP},
       </if>
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
@@ -258,7 +258,7 @@
         school = #{record.school,jdbcType=VARCHAR},
       </if>
       <if test="record.registerTime != null" >
-        register_time = #{record.registerTime,jdbcType=DATE},
+        register_time = #{record.registerTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.password != null" >
         password = #{record.password,jdbcType=VARCHAR},
@@ -284,7 +284,7 @@
       phone = #{record.phone,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
       school = #{record.school,jdbcType=VARCHAR},
-      register_time = #{record.registerTime,jdbcType=DATE},
+      register_time = #{record.registerTime,jdbcType=TIMESTAMP},
       password = #{record.password,jdbcType=VARCHAR},
       gold = #{record.gold,jdbcType=INTEGER}
     <if test="_parameter != null" >
@@ -325,7 +325,7 @@
         school = #{school,jdbcType=VARCHAR},
       </if>
       <if test="registerTime != null" >
-        register_time = #{registerTime,jdbcType=DATE},
+        register_time = #{registerTime,jdbcType=TIMESTAMP},
       </if>
       <if test="password != null" >
         password = #{password,jdbcType=VARCHAR},
@@ -348,7 +348,7 @@
       phone = #{phone,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
       school = #{school,jdbcType=VARCHAR},
-      register_time = #{registerTime,jdbcType=DATE},
+      register_time = #{registerTime,jdbcType=TIMESTAMP},
       password = #{password,jdbcType=VARCHAR},
       gold = #{gold,jdbcType=INTEGER}
     where user_id = #{userId,jdbcType=INTEGER}

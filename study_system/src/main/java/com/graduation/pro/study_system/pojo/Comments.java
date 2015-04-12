@@ -1,6 +1,7 @@
 package com.graduation.pro.study_system.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Comments implements Serializable {
     private Integer commentId;
@@ -10,6 +11,8 @@ public class Comments implements Serializable {
     private Integer itemFileId;
 
     private String commentContent;
+
+    private Date commentTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -45,6 +48,14 @@ public class Comments implements Serializable {
         this.commentContent = commentContent == null ? null : commentContent.trim();
     }
 
+    public Date getCommentTime() {
+        return commentTime;
+    }
+
+    public void setCommentTime(Date commentTime) {
+        this.commentTime = commentTime;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -60,7 +71,8 @@ public class Comments implements Serializable {
         return (this.getCommentId() == null ? other.getCommentId() == null : this.getCommentId().equals(other.getCommentId()))
             && (this.getUserid() == null ? other.getUserid() == null : this.getUserid().equals(other.getUserid()))
             && (this.getItemFileId() == null ? other.getItemFileId() == null : this.getItemFileId().equals(other.getItemFileId()))
-            && (this.getCommentContent() == null ? other.getCommentContent() == null : this.getCommentContent().equals(other.getCommentContent()));
+            && (this.getCommentContent() == null ? other.getCommentContent() == null : this.getCommentContent().equals(other.getCommentContent()))
+            && (this.getCommentTime() == null ? other.getCommentTime() == null : this.getCommentTime().equals(other.getCommentTime()));
     }
 
     @Override
@@ -71,6 +83,7 @@ public class Comments implements Serializable {
         result = prime * result + ((getUserid() == null) ? 0 : getUserid().hashCode());
         result = prime * result + ((getItemFileId() == null) ? 0 : getItemFileId().hashCode());
         result = prime * result + ((getCommentContent() == null) ? 0 : getCommentContent().hashCode());
+        result = prime * result + ((getCommentTime() == null) ? 0 : getCommentTime().hashCode());
         return result;
     }
 }

@@ -3,7 +3,6 @@ package com.graduation.pro.study_system.pojo;
 import com.graduation.pro.study_system.util.Page;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class MyDownloadExample {
@@ -115,32 +114,6 @@ public class MyDownloadExample {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
             criteria.add(new Criterion(condition, value1, value2));
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
-            if (value == null) {
-                throw new RuntimeException("Value for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value.getTime()), property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
-            if (values == null || values.size() == 0) {
-                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
-            }
-            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                dateList.add(new java.sql.Date(iter.next().getTime()));
-            }
-            addCriterion(condition, dateList, property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
-            if (value1 == null || value2 == null) {
-                throw new RuntimeException("Between values for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
         }
 
         public Criteria andDownloadIdIsNull() {
@@ -334,52 +307,52 @@ public class MyDownloadExample {
         }
 
         public Criteria andDownloadTimeEqualTo(Date value) {
-            addCriterionForJDBCDate("download_time =", value, "downloadTime");
+            addCriterion("download_time =", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeNotEqualTo(Date value) {
-            addCriterionForJDBCDate("download_time <>", value, "downloadTime");
+            addCriterion("download_time <>", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeGreaterThan(Date value) {
-            addCriterionForJDBCDate("download_time >", value, "downloadTime");
+            addCriterion("download_time >", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("download_time >=", value, "downloadTime");
+            addCriterion("download_time >=", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeLessThan(Date value) {
-            addCriterionForJDBCDate("download_time <", value, "downloadTime");
+            addCriterion("download_time <", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("download_time <=", value, "downloadTime");
+            addCriterion("download_time <=", value, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeIn(List<Date> values) {
-            addCriterionForJDBCDate("download_time in", values, "downloadTime");
+            addCriterion("download_time in", values, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeNotIn(List<Date> values) {
-            addCriterionForJDBCDate("download_time not in", values, "downloadTime");
+            addCriterion("download_time not in", values, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("download_time between", value1, value2, "downloadTime");
+            addCriterion("download_time between", value1, value2, "downloadTime");
             return (Criteria) this;
         }
 
         public Criteria andDownloadTimeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("download_time not between", value1, value2, "downloadTime");
+            addCriterion("download_time not between", value1, value2, "downloadTime");
             return (Criteria) this;
         }
     }

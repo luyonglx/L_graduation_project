@@ -36,11 +36,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- table name,  change tableName and domainObjectName  -->
-		<!-- <table tableName="Users"
-			domainObjectName="Users">
-		</table> -->
-		
-		
+		<table tableName="%" > </table>
 		<!--  <table tableName="address" domainObjectName="Address"> </table> 
 		 <table tableName="answer_sheet" domainObjectName="AnswerSheet"> </table> 
 		 <table tableName="big_question_result" domainObjectName="BigQuestionResult"> </table> 
@@ -58,9 +54,9 @@
 		 <table tableName="province" > </table> 
 		 <table tableName="question_choose" > </table> 
 		 <table tableName="questions" > </table> 
-		 <table tableName="section" > </table> -->
+		 <table tableName="section" > </table>
 		
-		 <table tableName="users" > </table>
+		 <table tableName="users" > </table> -->
 		   
 		
 		

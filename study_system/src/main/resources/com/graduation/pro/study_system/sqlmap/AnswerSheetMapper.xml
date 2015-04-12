@@ -5,7 +5,7 @@
     <id column="answer_sheet_id" property="answerSheetId" jdbcType="INTEGER" />
     <result column="Exam_paper_id" property="examPaperId" jdbcType="INTEGER" />
     <result column="userid" property="userid" jdbcType="INTEGER" />
-    <result column="Exam_time" property="examTime" jdbcType="DATE" />
+    <result column="Exam_time" property="examTime" jdbcType="TIMESTAMP" />
     <result column="Answer_ids_st" property="answerIdsSt" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -106,7 +106,7 @@
     insert into answer_sheet (answer_sheet_id, Exam_paper_id, userid, 
       Exam_time, Answer_ids_st)
     values (#{answerSheetId,jdbcType=INTEGER}, #{examPaperId,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, 
-      #{examTime,jdbcType=DATE}, #{answerIdsSt,jdbcType=VARCHAR})
+      #{examTime,jdbcType=TIMESTAMP}, #{answerIdsSt,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.AnswerSheet" >
     insert into answer_sheet
@@ -138,7 +138,7 @@
         #{userid,jdbcType=INTEGER},
       </if>
       <if test="examTime != null" >
-        #{examTime,jdbcType=DATE},
+        #{examTime,jdbcType=TIMESTAMP},
       </if>
       <if test="answerIdsSt != null" >
         #{answerIdsSt,jdbcType=VARCHAR},
@@ -164,7 +164,7 @@
         userid = #{record.userid,jdbcType=INTEGER},
       </if>
       <if test="record.examTime != null" >
-        Exam_time = #{record.examTime,jdbcType=DATE},
+        Exam_time = #{record.examTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.answerIdsSt != null" >
         Answer_ids_st = #{record.answerIdsSt,jdbcType=VARCHAR},
@@ -179,7 +179,7 @@
     set answer_sheet_id = #{record.answerSheetId,jdbcType=INTEGER},
       Exam_paper_id = #{record.examPaperId,jdbcType=INTEGER},
       userid = #{record.userid,jdbcType=INTEGER},
-      Exam_time = #{record.examTime,jdbcType=DATE},
+      Exam_time = #{record.examTime,jdbcType=TIMESTAMP},
       Answer_ids_st = #{record.answerIdsSt,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -195,7 +195,7 @@
         userid = #{userid,jdbcType=INTEGER},
       </if>
       <if test="examTime != null" >
-        Exam_time = #{examTime,jdbcType=DATE},
+        Exam_time = #{examTime,jdbcType=TIMESTAMP},
       </if>
       <if test="answerIdsSt != null" >
         Answer_ids_st = #{answerIdsSt,jdbcType=VARCHAR},
@@ -207,7 +207,7 @@
     update answer_sheet
     set Exam_paper_id = #{examPaperId,jdbcType=INTEGER},
       userid = #{userid,jdbcType=INTEGER},
-      Exam_time = #{examTime,jdbcType=DATE},
+      Exam_time = #{examTime,jdbcType=TIMESTAMP},
       Answer_ids_st = #{answerIdsSt,jdbcType=VARCHAR}
     where answer_sheet_id = #{answerSheetId,jdbcType=INTEGER}
   </update>

@@ -5,7 +5,7 @@
     <id column="download_id" property="downloadId" jdbcType="INTEGER" />
     <result column="userid" property="userid" jdbcType="INTEGER" />
     <result column="item_file_Id" property="itemFileId" jdbcType="INTEGER" />
-    <result column="download_time" property="downloadTime" jdbcType="DATE" />
+    <result column="download_time" property="downloadTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -105,7 +105,7 @@
     insert into my_download (download_id, userid, item_file_Id, 
       download_time)
     values (#{downloadId,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{itemFileId,jdbcType=INTEGER}, 
-      #{downloadTime,jdbcType=DATE})
+      #{downloadTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.MyDownload" >
     insert into my_download
@@ -134,7 +134,7 @@
         #{itemFileId,jdbcType=INTEGER},
       </if>
       <if test="downloadTime != null" >
-        #{downloadTime,jdbcType=DATE},
+        #{downloadTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -157,7 +157,7 @@
         item_file_Id = #{record.itemFileId,jdbcType=INTEGER},
       </if>
       <if test="record.downloadTime != null" >
-        download_time = #{record.downloadTime,jdbcType=DATE},
+        download_time = #{record.downloadTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -169,7 +169,7 @@
     set download_id = #{record.downloadId,jdbcType=INTEGER},
       userid = #{record.userid,jdbcType=INTEGER},
       item_file_Id = #{record.itemFileId,jdbcType=INTEGER},
-      download_time = #{record.downloadTime,jdbcType=DATE}
+      download_time = #{record.downloadTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -184,7 +184,7 @@
         item_file_Id = #{itemFileId,jdbcType=INTEGER},
       </if>
       <if test="downloadTime != null" >
-        download_time = #{downloadTime,jdbcType=DATE},
+        download_time = #{downloadTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where download_id = #{downloadId,jdbcType=INTEGER}
@@ -193,7 +193,7 @@
     update my_download
     set userid = #{userid,jdbcType=INTEGER},
       item_file_Id = #{itemFileId,jdbcType=INTEGER},
-      download_time = #{downloadTime,jdbcType=DATE}
+      download_time = #{downloadTime,jdbcType=TIMESTAMP}
     where download_id = #{downloadId,jdbcType=INTEGER}
   </update>
 </mapper>

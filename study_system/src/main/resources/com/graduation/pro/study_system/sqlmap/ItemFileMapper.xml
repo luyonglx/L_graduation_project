@@ -6,6 +6,7 @@
     <result column="grade_Id" property="gradeId" jdbcType="INTEGER" />
     <result column="subject_id" property="subjectId" jdbcType="INTEGER" />
     <result column="file_id" property="fileId" jdbcType="INTEGER" />
+    <result column="section_id" property="sectionId" jdbcType="INTEGER" />
     <result column="item_file_name" property="itemFileName" jdbcType="VARCHAR" />
     <result column="view_count" property="viewCount" jdbcType="INTEGER" />
     <result column="evaluate" property="evaluate" jdbcType="INTEGER" />
@@ -13,7 +14,6 @@
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="download_price" property="downloadPrice" jdbcType="INTEGER" />
     <result column="entering_date" property="enteringDate" jdbcType="DATE" />
-    <result column="section_id" property="sectionId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,8 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    item_file_Id, grade_Id, subject_id, file_id, item_file_name, view_count, evaluate, 
-    resource_from, author, download_price, entering_date, section_id
+    item_file_Id, grade_Id, subject_id, file_id, section_id, item_file_name, view_count, 
+    evaluate, resource_from, author, download_price, entering_date
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.graduation.pro.study_system.pojo.ItemFileExample" >
     select
@@ -112,14 +112,14 @@
   </delete>
   <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.ItemFile" >
     insert into item_file (item_file_Id, grade_Id, subject_id, 
-      file_id, item_file_name, view_count, 
-      evaluate, resource_from, author, 
-      download_price, entering_date, section_id
+      file_id, section_id, item_file_name, 
+      view_count, evaluate, resource_from, 
+      author, download_price, entering_date
       )
     values (#{itemFileId,jdbcType=INTEGER}, #{gradeId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER}, 
-      #{fileId,jdbcType=INTEGER}, #{itemFileName,jdbcType=VARCHAR}, #{viewCount,jdbcType=INTEGER}, 
-      #{evaluate,jdbcType=INTEGER}, #{resourceFrom,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
-      #{downloadPrice,jdbcType=INTEGER}, #{enteringDate,jdbcType=DATE}, #{sectionId,jdbcType=INTEGER}
+      #{fileId,jdbcType=INTEGER}, #{sectionId,jdbcType=INTEGER}, #{itemFileName,jdbcType=VARCHAR}, 
+      #{viewCount,jdbcType=INTEGER}, #{evaluate,jdbcType=INTEGER}, #{resourceFrom,jdbcType=VARCHAR}, 
+      #{author,jdbcType=VARCHAR}, #{downloadPrice,jdbcType=INTEGER}, #{enteringDate,jdbcType=DATE}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.ItemFile" >
@@ -136,6 +136,9 @@
       </if>
       <if test="fileId != null" >
         file_id,
+      </if>
+      <if test="sectionId != null" >
+        section_id,
       </if>
       <if test="itemFileName != null" >
         item_file_name,
@@ -158,9 +161,6 @@
       <if test="enteringDate != null" >
         entering_date,
       </if>
-      <if test="sectionId != null" >
-        section_id,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="itemFileId != null" >
@@ -174,6 +174,9 @@
       </if>
       <if test="fileId != null" >
         #{fileId,jdbcType=INTEGER},
+      </if>
+      <if test="sectionId != null" >
+        #{sectionId,jdbcType=INTEGER},
       </if>
       <if test="itemFileName != null" >
         #{itemFileName,jdbcType=VARCHAR},
@@ -195,9 +198,6 @@
       </if>
       <if test="enteringDate != null" >
         #{enteringDate,jdbcType=DATE},
-      </if>
-      <if test="sectionId != null" >
-        #{sectionId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -222,6 +222,9 @@
       <if test="record.fileId != null" >
         file_id = #{record.fileId,jdbcType=INTEGER},
       </if>
+      <if test="record.sectionId != null" >
+        section_id = #{record.sectionId,jdbcType=INTEGER},
+      </if>
       <if test="record.itemFileName != null" >
         item_file_name = #{record.itemFileName,jdbcType=VARCHAR},
       </if>
@@ -243,9 +246,6 @@
       <if test="record.enteringDate != null" >
         entering_date = #{record.enteringDate,jdbcType=DATE},
       </if>
-      <if test="record.sectionId != null" >
-        section_id = #{record.sectionId,jdbcType=INTEGER},
-      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -257,14 +257,14 @@
       grade_Id = #{record.gradeId,jdbcType=INTEGER},
       subject_id = #{record.subjectId,jdbcType=INTEGER},
       file_id = #{record.fileId,jdbcType=INTEGER},
+      section_id = #{record.sectionId,jdbcType=INTEGER},
       item_file_name = #{record.itemFileName,jdbcType=VARCHAR},
       view_count = #{record.viewCount,jdbcType=INTEGER},
       evaluate = #{record.evaluate,jdbcType=INTEGER},
       resource_from = #{record.resourceFrom,jdbcType=VARCHAR},
       author = #{record.author,jdbcType=VARCHAR},
       download_price = #{record.downloadPrice,jdbcType=INTEGER},
-      entering_date = #{record.enteringDate,jdbcType=DATE},
-      section_id = #{record.sectionId,jdbcType=INTEGER}
+      entering_date = #{record.enteringDate,jdbcType=DATE}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -280,6 +280,9 @@
       </if>
       <if test="fileId != null" >
         file_id = #{fileId,jdbcType=INTEGER},
+      </if>
+      <if test="sectionId != null" >
+        section_id = #{sectionId,jdbcType=INTEGER},
       </if>
       <if test="itemFileName != null" >
         item_file_name = #{itemFileName,jdbcType=VARCHAR},
@@ -302,9 +305,6 @@
       <if test="enteringDate != null" >
         entering_date = #{enteringDate,jdbcType=DATE},
       </if>
-      <if test="sectionId != null" >
-        section_id = #{sectionId,jdbcType=INTEGER},
-      </if>
     </set>
     where item_file_Id = #{itemFileId,jdbcType=INTEGER}
   </update>
@@ -313,14 +313,14 @@
     set grade_Id = #{gradeId,jdbcType=INTEGER},
       subject_id = #{subjectId,jdbcType=INTEGER},
       file_id = #{fileId,jdbcType=INTEGER},
+      section_id = #{sectionId,jdbcType=INTEGER},
       item_file_name = #{itemFileName,jdbcType=VARCHAR},
       view_count = #{viewCount,jdbcType=INTEGER},
       evaluate = #{evaluate,jdbcType=INTEGER},
       resource_from = #{resourceFrom,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
       download_price = #{downloadPrice,jdbcType=INTEGER},
-      entering_date = #{enteringDate,jdbcType=DATE},
-      section_id = #{sectionId,jdbcType=INTEGER}
+      entering_date = #{enteringDate,jdbcType=DATE}
     where item_file_Id = #{itemFileId,jdbcType=INTEGER}
   </update>
 </mapper>

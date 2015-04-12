@@ -7,7 +7,7 @@
     <result column="question_desc" property="questionDesc" jdbcType="VARCHAR" />
     <result column="difficulty" property="difficulty" jdbcType="INTEGER" />
     <result column="used_rate" property="usedRate" jdbcType="REAL" />
-    <result column="create_time" property="createTime" jdbcType="DATE" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="question_type" property="questionType" jdbcType="VARCHAR" />
     <result column="Question_analysis" property="questionAnalysis" jdbcType="VARCHAR" />
   </resultMap>
@@ -111,7 +111,7 @@
       difficulty, used_rate, create_time, 
       question_type, Question_analysis)
     values (#{questionId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER}, #{questionDesc,jdbcType=VARCHAR}, 
-      #{difficulty,jdbcType=INTEGER}, #{usedRate,jdbcType=REAL}, #{createTime,jdbcType=DATE}, 
+      #{difficulty,jdbcType=INTEGER}, #{usedRate,jdbcType=REAL}, #{createTime,jdbcType=TIMESTAMP}, 
       #{questionType,jdbcType=VARCHAR}, #{questionAnalysis,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.Questions" >
@@ -159,7 +159,7 @@
         #{usedRate,jdbcType=REAL},
       </if>
       <if test="createTime != null" >
-        #{createTime,jdbcType=DATE},
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="questionType != null" >
         #{questionType,jdbcType=VARCHAR},
@@ -194,7 +194,7 @@
         used_rate = #{record.usedRate,jdbcType=REAL},
       </if>
       <if test="record.createTime != null" >
-        create_time = #{record.createTime,jdbcType=DATE},
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.questionType != null" >
         question_type = #{record.questionType,jdbcType=VARCHAR},
@@ -214,7 +214,7 @@
       question_desc = #{record.questionDesc,jdbcType=VARCHAR},
       difficulty = #{record.difficulty,jdbcType=INTEGER},
       used_rate = #{record.usedRate,jdbcType=REAL},
-      create_time = #{record.createTime,jdbcType=DATE},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       question_type = #{record.questionType,jdbcType=VARCHAR},
       Question_analysis = #{record.questionAnalysis,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -237,7 +237,7 @@
         used_rate = #{usedRate,jdbcType=REAL},
       </if>
       <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=DATE},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="questionType != null" >
         question_type = #{questionType,jdbcType=VARCHAR},
@@ -254,7 +254,7 @@
       question_desc = #{questionDesc,jdbcType=VARCHAR},
       difficulty = #{difficulty,jdbcType=INTEGER},
       used_rate = #{usedRate,jdbcType=REAL},
-      create_time = #{createTime,jdbcType=DATE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
       question_type = #{questionType,jdbcType=VARCHAR},
       Question_analysis = #{questionAnalysis,jdbcType=VARCHAR}
     where question_id = #{questionId,jdbcType=INTEGER}

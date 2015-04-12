@@ -2,6 +2,7 @@ package com.graduation.pro.study_system.pojo;
 
 import com.graduation.pro.study_system.util.Page;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class BigQuestionResultExample {
@@ -302,6 +303,66 @@ public class BigQuestionResultExample {
 
         public Criteria andResultDescNotBetween(String value1, String value2) {
             addCriterion("result_desc not between", value1, value2, "resultDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeIsNull() {
+            addCriterion("exam_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeIsNotNull() {
+            addCriterion("exam_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeEqualTo(Date value) {
+            addCriterion("exam_time =", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeNotEqualTo(Date value) {
+            addCriterion("exam_time <>", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeGreaterThan(Date value) {
+            addCriterion("exam_time >", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("exam_time >=", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeLessThan(Date value) {
+            addCriterion("exam_time <", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeLessThanOrEqualTo(Date value) {
+            addCriterion("exam_time <=", value, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeIn(List<Date> values) {
+            addCriterion("exam_time in", values, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeNotIn(List<Date> values) {
+            addCriterion("exam_time not in", values, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeBetween(Date value1, Date value2) {
+            addCriterion("exam_time between", value1, value2, "examTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andExamTimeNotBetween(Date value1, Date value2) {
+            addCriterion("exam_time not between", value1, value2, "examTime");
             return (Criteria) this;
         }
     }
