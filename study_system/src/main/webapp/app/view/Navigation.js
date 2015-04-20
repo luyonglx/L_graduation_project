@@ -1,8 +1,8 @@
-Ext.define('StudyOnLine.view.Navigation',{
+Ext.define('E-learning.view.Navigation',{
     extend: 'Ext.panel.Panel',
     alias: 'widget.navigation',
     layout : 'accordion',
-    width : 230,
+    width :263,
     split : true,
     collapsed : true,
     collapsible : true,

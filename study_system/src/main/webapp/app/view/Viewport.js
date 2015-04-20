@@ -1,30 +1,28 @@
 /**
  * Created by LUYONG on 2015/1/8.
  */
-Ext.define("StudyOnLine.view.Viewport",
+Ext.define("E-learning.view.Viewport",
 				{
 					extend : 'Ext.container.Viewport',
 					layout : 'border',
+                    height:'100%',
 					items : [
 							{
 								region : 'west',
+                                width:'16%',
                                 xtype:'navigation'
 
 							},
 							{
 								region : 'center',
+								xtype : 'panel',
+								layout : 'fit',
 
-
-								xtype : 'tabpanel',
-								layout : {
-									type : 'fit'
-								},
 								items : [
-										{
-											title:'欢迎',
-                                            frame:true,
-											html : '<h2>欢迎来到L学习系统</h2>'
-										} ]
+                                         {
+                                           xtype:'examTab'
+                                          }
+                                ]
 							},
 							{
 								xtype : 'panel',
@@ -36,7 +34,7 @@ Ext.define("StudyOnLine.view.Viewport",
 								region : 'south',
 								ui : 'footer',
 								margin : '7 0 0 0',
-								items : [ '就绪', '->', '&copy; 2014 浙江工业大学' ]
+								items : [ '就绪', '->', '&copy; 2015 西南大学 ——罗谐' ]
 							} ]
 
 				});

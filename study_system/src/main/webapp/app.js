@@ -11,7 +11,7 @@ Ext.onReady(function(){
     //创建应用程序的实例
     Ext.application({
         //设定命名空间
-        name: 'StudyOnLine',
+        name: 'E-learning',
         //指定配置选项，设置相应的路径
         appFolder: 'app',
         //加载控制器

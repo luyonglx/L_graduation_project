@@ -5,7 +5,8 @@
  * Time: 下午2:45
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('StudyOnLine.controller.MainController',{
+Ext.define('E-learning.controller.MainController',{
     extend:'Ext.app.Controller',
-    views:['Navigation']
+    views:['Navigation','ExamTab','SingleChoicePanel','UncertainItemChoicePanel','ShortAnswerQuestionsPanel',
+    'SingleChoiceItemArea']
 })
