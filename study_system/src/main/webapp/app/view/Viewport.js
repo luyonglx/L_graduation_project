@@ -27,8 +27,8 @@ Ext.define("E-learning.view.Viewport",
 							{
 								xtype : 'panel',
 								region : 'north',
-								height : 50,
-								html : '<div style="background-color:#804b65; font-size:30px; height:45px; line-height: 40px; padding-left: 20px;">考出你的风采</div>'
+
+								html : '<div style="background-color:#d6e6fa; font-size:30px; height:45px; line-height: 40px; padding-left: 20px;">考出你的风采</div>'
 							}, {
 								xtype : 'toolbar',
 								region : 'south',

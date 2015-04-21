@@ -8,5 +8,5 @@
 Ext.define('E-learning.controller.MainController',{
     extend:'Ext.app.Controller',
     views:['Navigation','ExamTab','SingleChoicePanel','UncertainItemChoicePanel','ShortAnswerQuestionsPanel',
-    'SingleChoiceItemArea']
+    'SingleChoiceItemArea','UncertainItem','SingleChoiceItem','ShortAnswerQuestionsItem']
 })

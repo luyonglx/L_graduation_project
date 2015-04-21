@@ -9,6 +9,37 @@ Ext.define('E-learning.view.UncertainItemChoicePanel',{
     extend:'Ext.form.Panel',
     alias:'widget.uncertainItemChoicePanel',
     title:'不定项选择题',
-    width:'100%'
+    //width:'100%',
+    defaultType:'form',
+    defaults:{
+        border:false,
+        flex:1
+    },
+    bodyStyle :'overflow-x:hidden;overflow-y:scroll;',
+    layout:'hbox',
+    items:[
+        {
+
+           name:'uncertainItemAreaLeft',
+           items:[
+               {
+                   xtype:'uncertainItem'
+               },
+               {
+                   xtype:'uncertainItem'
+               }
+           ]
+        },
+        {
+
+            name:'uncertainItemAreaRight',
+            items:[
+                {
+                    xtype:'uncertainItem'
+                }
+            ]
+
+        }
+    ]
     //height:400
 });

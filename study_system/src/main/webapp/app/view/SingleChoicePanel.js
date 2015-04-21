@@ -10,14 +10,22 @@ Ext.define('E-learning.view.SingleChoicePanel',{
     title:'单选题',
     alias:'widget.singleChoicePanel',
     //autoScroll:true,
-    bodyStyle :'overflow-x:hidden;overflow-y:scroll',
-    //layout:'fit',
+    bodyStyle :'overflow-x:hidden;overflow-y:scroll;',
+    layout:'hbox',
    // width:'100%',
     items:[
         {
             xtype:'singleChoiceItemArea',
-            width:'100%'
+            name:'singleChoiceItemAreaLeft',
+            width:'50%'
+            //height:'100%'
+        },
+        {
+            xtype:'singleChoiceItemArea',
+            name:'singleChoiceItemAreaRight',
+            width:'50%'
             //height:'100%'
         }
+
     ]
 });

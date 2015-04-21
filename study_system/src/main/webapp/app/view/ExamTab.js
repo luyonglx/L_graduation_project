@@ -16,6 +16,10 @@ Ext.define('E-learning.view.ExamTab',{
     bbar:[
         {
             xtype:'button',
+            margin:'0 0 0 600',
+            style:{
+                backcolor:'#efefef'
+            },
             text:'提交'
         },
         {
@@ -25,7 +29,7 @@ Ext.define('E-learning.view.ExamTab',{
     ],
     items:[
         {
-           xtype:'singleChoicePanel',
+            xtype:'singleChoicePanel',
             width:'100%',
             border:false
         }
@@ -38,7 +42,7 @@ Ext.define('E-learning.view.ExamTab',{
         {
            xtype:'shortAnswerQuestionsPanel',
             width:'100%',
-            border:false
+            border:1
         }
     ]
 

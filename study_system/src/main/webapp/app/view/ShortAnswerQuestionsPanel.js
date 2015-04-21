@@ -9,6 +9,14 @@ Ext.define('E-learning.view.ShortAnswerQuestionsPanel',{
     extend:'Ext.form.Panel',
     alias:'widget.shortAnswerQuestionsPanel',
     title:'简答题',
-    width:'100%'
-   // height:200
+    //width:'100%',
+    items:[
+        {
+            xtype:'shortAnswerQuestionsItem'
+        },
+        {
+            xtype:'shortAnswerQuestionsItem'
+        }
+    ]
+
 });
