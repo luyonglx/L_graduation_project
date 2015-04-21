@@ -20,7 +20,7 @@ Ext.define('E-learning.view.UncertainItem',{
                 {
                     name:'1',
                     boxLabel:'A．奖掖（yâ） 贮存（zhù） 按捺（nài） 棱角分明（lãng）',
-                    checked:true
+                    //checked:true
                 },
                 {
                     name:'2',                  //名字相同的单选框做为一组

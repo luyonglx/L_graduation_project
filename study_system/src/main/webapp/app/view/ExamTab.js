@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 Ext.define('E-learning.view.ExamTab',{
-    extend:'Ext.panel.Panel',
+    extend:'Ext.form.Panel',
     //title:'考卷',
     alias:'widget.examTab',
     layout: {
@@ -24,7 +24,11 @@ Ext.define('E-learning.view.ExamTab',{
         },
         {
             xtype:'button',
-            text:'重置'
+            text:'重置',
+            handler:function(btn)
+            {
+                btn.up('form').getForm().reset();
+            }
         }
     ],
     items:[

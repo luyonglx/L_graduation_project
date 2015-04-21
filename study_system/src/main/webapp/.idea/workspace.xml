@@ -29,10 +29,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExamTab.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExamTab.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/ExamTab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="35" selection-start="495" selection-end="495" vertical-scroll-proportion="0.418018">
+            <state line="11" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UncertainItem.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/UncertainItem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="22" selection-start="612" selection-end="612" vertical-scroll-proportion="0.34234235">
               <folding />
             </state>
           </provider>
@@ -55,7 +64,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/view/Viewport.js" />
         <option value="$PROJECT_DIR$/app/view/UncertainItemView.js" />
-        <option value="$PROJECT_DIR$/app/view/UncertainItem.js" />
         <option value="$PROJECT_DIR$/app/view/SingleChoiceItem.js" />
         <option value="$PROJECT_DIR$/app/view/SingleChoiceItemArea.js" />
         <option value="$PROJECT_DIR$/app/view/SingleChoicePanel.js" />
@@ -64,6 +72,7 @@
         <option value="$PROJECT_DIR$/app/controller/MainController.js" />
         <option value="$PROJECT_DIR$/app/view/ShortAnswerQuestionsPanel.js" />
         <option value="$PROJECT_DIR$/app/view/ExamTab.js" />
+        <option value="$PROJECT_DIR$/app/view/UncertainItem.js" />
       </list>
     </option>
   </component>
@@ -258,13 +267,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/view/SingleChoiceItemArea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="312" selection-end="312" vertical-scroll-proportion="0.34954956">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/UncertainItemChoicePanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="14" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
@@ -355,7 +357,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/ExamTab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="495" selection-end="495" vertical-scroll-proportion="0.418018">
+        <state line="11" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/UncertainItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="612" selection-end="612" vertical-scroll-proportion="0.34234235">
           <folding />
         </state>
       </provider>
