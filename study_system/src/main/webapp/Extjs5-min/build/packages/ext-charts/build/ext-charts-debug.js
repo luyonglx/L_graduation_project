@@ -5936,7 +5936,7 @@ Ext.define('Ext.chart.Label', {
                             }
                         }
 
-                        // set color (the app can override it in onPlaceLabel)
+                        // set color (the Exam can override it in onPlaceLabel)
                         label.setAttributes({
                             fill: String(color)
                         }, true);
@@ -12430,7 +12430,7 @@ Ext.define('Ext.chart.series.Bar', {
                 text = label.attr.text;
                 label.setAttributes({
                     // The text is already set onto the label: we just need to set the style
-                    // (but don't overwrite any custom style that might have been set by an app override).
+                    // (but don't overwrite any custom style that might have been set by an Exam override).
                     style: Ext.applyIf((label.attr && label.attr.style) || {},
                         {
                             'font-weight':'bold',

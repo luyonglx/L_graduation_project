@@ -11,9 +11,9 @@ Ext.onReady(function(){
     //创建应用程序的实例
     Ext.application({
         //设定命名空间
-        name: 'E-learning',
+        name: 'StudyResource',
         //指定配置选项，设置相应的路径
-        appFolder: 'app',
+        appFolder: 'StudyResource',
         //加载控制器
         controllers:['MainController'],
         //自动加载和实例化Viewport文件

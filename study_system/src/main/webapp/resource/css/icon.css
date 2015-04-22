@@ -1,0 +1,29 @@
+.button-ok{
+    background: url("../images/ok.jpg") no-repeat;
+    background-size: 100%;
+}
+.button-reset{
+    background: url("../images/reset.png") no-repeat;
+    background-size: 100%;
+}
+/*.treeNode-textBook{*/
+    /*background: url("../images/book.jpg") no-repeat;*/
+    /*background-size: 100%;*/
+/*}*/
+.treeNode-helpBook{
+    background: url("../images/helpBook.jpg") no-repeat;
+    background-size: 100%;
+}
+
+.x-tree-node-expanded.treeNode-textBook{
+    background: url("../images/book.jpg") no-repeat;
+    background-size: 100%;
+}
+.x-tree-node-collapsed .treeNode-textBook{
+    background: url("../images/book.jpg") no-repeat;
+    background-size: 100%;
+}
+.x-tree-node-leaf  .treeNode-textBook{
+    background: url("../images/book.jpg") no-repeat;
+    background-size: 100%;
+}

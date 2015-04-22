@@ -65,8 +65,8 @@ var Ext = Ext || {};
     "Ext.Version": "../../packages/sencha-core/src/util/Version.js",
     "Ext.Widget": "../../packages/sencha-core/src/Widget.js",
     "Ext.XTemplate": "../../packages/sencha-core/src/XTemplate.js",
-    "Ext.app.ViewModel": "../../packages/sencha-core/src/app/ViewModel.js",
-    "Ext.app.bind": "../../packages/sencha-core/src/app/bind",
+    "Ext.app.ViewModel": "../../packages/sencha-core/src/Exam/ViewModel.js",
+    "Ext.app.bind": "../../packages/sencha-core/src/Exam/bind",
     "Ext.browser": "../../packages/sencha-core/src/env/Browser.js",
     "Ext.class": "../../packages/sencha-core/src/class",
     "Ext.data": "../../packages/sencha-core/src/data",
@@ -946,7 +946,7 @@ var Ext = Ext || {};
       "idx": 98
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/Stub.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/Stub.js",
       "requires": [
         91,
         92
@@ -957,7 +957,7 @@ var Ext = Ext || {};
       "idx": 99
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/LinkStub.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/LinkStub.js",
       "requires": [
         99
       ],
@@ -965,7 +965,7 @@ var Ext = Ext || {};
       "idx": 100
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/RootStub.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/RootStub.js",
       "requires": [
         92,
         99,
@@ -975,7 +975,7 @@ var Ext = Ext || {};
       "idx": 101
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/Multi.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/Multi.js",
       "requires": [
         90
       ],
@@ -983,7 +983,7 @@ var Ext = Ext || {};
       "idx": 102
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/Formula.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/Formula.js",
       "requires": [
         89
       ],
@@ -991,13 +991,13 @@ var Ext = Ext || {};
       "idx": 103
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/Template.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/Template.js",
       "requires": [],
       "uses": [],
       "idx": 104
     },
     {
-      "path": "../../packages/sencha-core/src/app/bind/TemplateBinding.js",
+      "path": "../../packages/sencha-core/src/Exam/bind/TemplateBinding.js",
       "requires": [
         90,
         102,
@@ -1042,7 +1042,7 @@ var Ext = Ext || {};
       "idx": 108
     },
     {
-      "path": "../../packages/sencha-core/src/app/ViewModel.js",
+      "path": "../../packages/sencha-core/src/Exam/ViewModel.js",
       "requires": [
         0,
         74,
@@ -2837,7 +2837,7 @@ var Ext = Ext || {};
       "idx": 301
     },
     {
-      "path": "../src/app/EventDomain.js",
+      "path": "../src/Exam/EventDomain.js",
       "requires": [
         29
       ],
@@ -2845,7 +2845,7 @@ var Ext = Ext || {};
       "idx": 302
     },
     {
-      "path": "../src/app/domain/Component.js",
+      "path": "../src/Exam/domain/Component.js",
       "requires": [
         70,
         276,
@@ -2855,7 +2855,7 @@ var Ext = Ext || {};
       "idx": 303
     },
     {
-      "path": "../src/app/EventBus.js",
+      "path": "../src/Exam/EventBus.js",
       "requires": [
         303
       ],
@@ -2865,7 +2865,7 @@ var Ext = Ext || {};
       "idx": 304
     },
     {
-      "path": "../src/app/domain/Global.js",
+      "path": "../src/Exam/domain/Global.js",
       "requires": [
         302
       ],
@@ -2873,7 +2873,7 @@ var Ext = Ext || {};
       "idx": 305
     },
     {
-      "path": "../src/app/BaseController.js",
+      "path": "../src/Exam/BaseController.js",
       "requires": [
         30,
         304,
@@ -2887,13 +2887,13 @@ var Ext = Ext || {};
       "idx": 306
     },
     {
-      "path": "../src/app/Util.js",
+      "path": "../src/Exam/Util.js",
       "requires": [],
       "uses": [],
       "idx": 307
     },
     {
-      "path": "../src/app/domain/Store.js",
+      "path": "../src/Exam/domain/Store.js",
       "requires": [
         106,
         302
@@ -2902,7 +2902,7 @@ var Ext = Ext || {};
       "idx": 308
     },
     {
-      "path": "../src/app/route/Queue.js",
+      "path": "../src/Exam/route/Queue.js",
       "requires": [],
       "uses": [
         34
@@ -2910,7 +2910,7 @@ var Ext = Ext || {};
       "idx": 309
     },
     {
-      "path": "../src/app/route/Route.js",
+      "path": "../src/Exam/route/Route.js",
       "requires": [],
       "uses": [],
       "idx": 310
@@ -2927,7 +2927,7 @@ var Ext = Ext || {};
       "idx": 311
     },
     {
-      "path": "../src/app/route/Router.js",
+      "path": "../src/Exam/route/Router.js",
       "requires": [
         309,
         310,
@@ -2937,7 +2937,7 @@ var Ext = Ext || {};
       "idx": 312
     },
     {
-      "path": "../src/app/Controller.js",
+      "path": "../src/Exam/Controller.js",
       "requires": [
         63,
         161,
@@ -3335,7 +3335,7 @@ var Ext = Ext || {};
       "idx": 348
     },
     {
-      "path": "../src/app/Application.js",
+      "path": "../src/Exam/Application.js",
       "requires": [
         34,
         311,
@@ -3349,7 +3349,7 @@ var Ext = Ext || {};
       "idx": 349
     },
     {
-      "path": "../src/app/domain/View.js",
+      "path": "../src/Exam/domain/View.js",
       "requires": [
         302
       ],
@@ -3359,7 +3359,7 @@ var Ext = Ext || {};
       "idx": 350
     },
     {
-      "path": "../src/app/ViewController.js",
+      "path": "../src/Exam/ViewController.js",
       "requires": [
         74,
         306,
@@ -3562,7 +3562,7 @@ var Ext = Ext || {};
       "idx": 369
     },
     {
-      "path": "../src/app/bindinspector/ComponentDetail.js",
+      "path": "../src/Exam/bindinspector/ComponentDetail.js",
       "requires": [
         285,
         331,
@@ -3801,7 +3801,7 @@ var Ext = Ext || {};
       "idx": 391
     },
     {
-      "path": "../src/app/bindinspector/ComponentList.js",
+      "path": "../src/Exam/bindinspector/ComponentList.js",
       "requires": [
         340,
         356,
@@ -3899,7 +3899,7 @@ var Ext = Ext || {};
       "idx": 400
     },
     {
-      "path": "../src/app/bindinspector/Environment.js",
+      "path": "../src/Exam/bindinspector/Environment.js",
       "requires": [
         77
       ],
@@ -3910,13 +3910,13 @@ var Ext = Ext || {};
       "idx": 401
     },
     {
-      "path": "../src/app/bindinspector/Util.js",
+      "path": "../src/Exam/bindinspector/Util.js",
       "requires": [],
       "uses": [],
       "idx": 402
     },
     {
-      "path": "../src/app/bindinspector/ViewModelDetail.js",
+      "path": "../src/Exam/bindinspector/ViewModelDetail.js",
       "requires": [
         340,
         356,
@@ -3932,7 +3932,7 @@ var Ext = Ext || {};
       "idx": 403
     },
     {
-      "path": "../src/app/bindinspector/noconflict/BaseModel.js",
+      "path": "../src/Exam/bindinspector/noconflict/BaseModel.js",
       "requires": [
         134
       ],
@@ -3940,7 +3940,7 @@ var Ext = Ext || {};
       "idx": 404
     },
     {
-      "path": "../src/app/bindinspector/Container.js",
+      "path": "../src/Exam/bindinspector/Container.js",
       "requires": [
         285,
         370,
@@ -3985,7 +3985,7 @@ var Ext = Ext || {};
       "idx": 407
     },
     {
-      "path": "../src/app/bindinspector/Inspector.js",
+      "path": "../src/Exam/bindinspector/Inspector.js",
       "requires": [
         340,
         347,
@@ -4000,7 +4000,7 @@ var Ext = Ext || {};
       "idx": 408
     },
     {
-      "path": "../src/app/domain/Controller.js",
+      "path": "../src/Exam/domain/Controller.js",
       "requires": [
         302,
         313
@@ -4011,7 +4011,7 @@ var Ext = Ext || {};
       "idx": 409
     },
     {
-      "path": "../src/app/domain/Direct.js",
+      "path": "../src/Exam/domain/Direct.js",
       "requires": [
         193,
         302
@@ -26535,8 +26535,8 @@ Ext.define('Ext.overrides.Widget', {
 
 
 
-Ext.define('Ext.overrides.app.Application', {
-    override: 'Ext.app.Application'
+Ext.define('Ext.overrides.Exam.Application', {
+    override: 'Ext.Exam.Application'
 });
 
 
@@ -26557,12 +26557,12 @@ Ext.application = function(config) {
     }
     else {
         config = Ext.apply({
-            extend: 'Ext.app.Application' 
+            extend: 'Ext.Exam.Application'
         }, config);
 
         
         
-        Ext.Loader.setPath(config.name, config.appFolder || 'app');
+        Ext.Loader.setPath(config.name, config.appFolder || 'Exam');
 
         if (paths) {
             for (ns in paths) {
