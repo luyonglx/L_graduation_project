@@ -13,9 +13,9 @@ Ext.onReady(function(){
         //设定命名空间
         name: 'StudyResource',
         //指定配置选项，设置相应的路径
-        appFolder: 'StudyResource',
+        appFolder: 'StudyResourceManage',
         //加载控制器
-        controllers:['MainController'],
+        controllers:['MainController','ItemFileManageController'],
         //自动加载和实例化Viewport文件
         autoCreateViewport: true
     });

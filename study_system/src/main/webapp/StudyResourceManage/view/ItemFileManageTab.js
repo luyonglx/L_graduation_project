@@ -95,7 +95,7 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
             flex:8,
             columnLines : true,
             selType : 'checkboxmodel',
-            //store : 'TaskManageStore',
+            store : 'ItemFileManageStore',
             // border: false,
             tbar : [ {
                 text : '新增',
@@ -114,73 +114,74 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
             columns:[
                 {
                     header : '资源编号',
-                    dataIndex : 'taskId',
+                    dataIndex : 'itemFileId',
                     flex :1
                 },
                 {
                     header : '资源名称',
-                    dataIndex : 'accoId',
+                    dataIndex : 'itemFileName',
                     flex :1
                 },
                 {
                     header : '科目类编号',
-                    dataIndex : 'accoName',
+                    dataIndex : 'subjectId',
                     flex : 1
                 },
                 {
                     header : '年级类编号',
-                    dataIndex : 'scanPath',
+                    dataIndex : 'gradeId',
                     flex : 1
                 },
                 {
                     header : '对应文件名编号',
-                    dataIndex : 'taskId',
+                    dataIndex : 'fileId',
                     flex : 1
                 },
                 {
                     header : '查看次数',
-                    dataIndex : 'accoId',
+                    dataIndex : 'viewCount',
                     flex :1
                 },
                 {
                     header : '等级评分',
-                    dataIndex : 'accoName',
+                    dataIndex : 'evaluate',
                     flex : 1
                 },
                 {
                     header : '资源来源',
-                    dataIndex : 'scanPath',
+                    dataIndex : 'from',
                     flex : 1
                 },
                 {
                     header : '作者',
-                    dataIndex : 'scanPath',
+                    dataIndex : 'author',
                     flex : 1
                 },
+
                 {
                     header : '相关文档',
-                    dataIndex : 'taskId',
+                    dataIndex : 'relateDocumentId',
                     flex :1
                 },
                 {
                     header : '下载金币',
-                    dataIndex : 'accoId',
+                    dataIndex : 'downloadGold',
                     flex : 1
                 },
                 {
                     header : '收录日期',
-                    dataIndex : 'accoName',
+                    dataIndex : 'enteringDate',
                     flex : 1
                 },
                 {
                     header : '板块',
-                    dataIndex : 'scanPath',
+                    dataIndex : 'sectionId',
                     flex : 1
                 }
             ],
             dockedItems: [{
                 xtype: 'pagingtoolbar',
-               // store: 'KeywordListStore',   // GridPanel中使用的数据
+                store: 'ItemFileManageStore',   // GridPanel中使用的数据
                 pageSize:25,
                 dock: 'bottom',
                 displayInfo: true
