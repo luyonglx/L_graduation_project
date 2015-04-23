@@ -105,7 +105,7 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                 iconCls : 'delete-icon'
             }, {
                 text : '刷新',
-                iconCls : 'refresh-icon',
+                iconCls : 'refresh',
                 handler : function(btn) {
                     btn.up('grid').getStore().reload();
                 }
