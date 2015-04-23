@@ -8,9 +8,10 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
     views:['ItemFileManageTab'],
     init:function(){
         this.control({
-            'itemFileManageTab > grid':{
+            'itemFileManageTab':{
                 beforerender:function(){
-                    this.getStore('ItemFileManageStore').load();
+                    console.log(this.getStore('ItemFileManageStore'));
+                   //this.getStore('ItemFileManageStore').load();
                 }
                 //celldblclick : this.onTaskGirdCellDBClick
             },
@@ -44,10 +45,7 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
             Ext.Msg.confirm('提示', '确定删除列表选中项？', function(isok) {
                 if (isok == "yes") {
                     for (var i = 0; i < selectRows.length; i++) {
-                        if(selectRows[i].data.executedCount==0)
-                            store.remove(selectRows[i]);
-                        else
-                            Ext.Msg.alert('提示','该条任务执行次数不为零，不能删除');
+                         store.remove(selectRows[i])
                     }
                     store.sync();
                 }

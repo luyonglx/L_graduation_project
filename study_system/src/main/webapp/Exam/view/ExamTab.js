@@ -14,6 +14,7 @@ Ext.define('E-learning.view.ExamTab',{
         // layout-specific configs go here
         type: 'accordion'
     },
+    buttonAlign:'center',
     buttons:[
         {
             xtype:'button',

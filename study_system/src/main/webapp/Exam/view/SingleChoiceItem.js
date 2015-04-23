@@ -15,10 +15,10 @@ Ext.define('E-learning.view.SingleChoiceItem',{
         margin:'0 0 0 20'
     },
     title:'1.下列词语中加点字的读音，全都正确的一组是',
-    border:false,
     items:[
         {
             defaultType:'radiofield',
+            border:false,
             layout:'vbox',
             name:'like',
             items:[

@@ -37,7 +37,7 @@ Ext.define("E-learning.view.Viewport",
 								region : 'south',
 								ui : 'footer',
 								margin : '7 0 0 0',
-								items : [ '就绪', '->', '&copy; 2015 西南大学 ——罗谐' ]
+								items : [ '就绪', '->', '&copy;' ]
 							} ]
 
 				});

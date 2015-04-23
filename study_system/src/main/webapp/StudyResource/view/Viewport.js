@@ -1,7 +1,7 @@
 /**
  * Created by LUYONG on 2015/1/8.
  */
-Ext.define("StudyResource.view.Viewport",
+Ext.define("StuResource.view.Viewport",
 				{
 					extend : 'Ext.container.Viewport',
 					layout : 'border',
@@ -21,6 +21,18 @@ Ext.define("StudyResource.view.Viewport",
                                          {
                                             title:'资料预览',
                                              frame:true,
+                                             items:[
+                                                 {
+                                                     xtype:'button',
+                                                     text:'在线阅览'
+                                                 },
+                                                 {
+                                                     xtype:'button',
+                                                     text:'下载',
+                                                     iconCls:'download-icon'
+                                                 }
+
+                                             ],
                                              buttons:[
                                                  {
                                                      text:'确定',
@@ -54,7 +66,7 @@ Ext.define("StudyResource.view.Viewport",
 								region : 'south',
 								ui : 'footer',
 								margin : '7 0 0 0',
-								items : [ '就绪', '->', '&copy; 2015 西南大学 ——罗谐' ]
+								items : [ '就绪', '->', '&copy;' ]
 							} ]
 
 				});
