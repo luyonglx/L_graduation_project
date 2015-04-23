@@ -20,10 +20,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="icon.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="icon.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="327" selection-end="327" vertical-scroll-proportion="0.24684684">
+            <state line="6" column="26" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resource/css/common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="34" selection-start="807" selection-end="807" vertical-scroll-proportion="0.38560885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StudyResource/view/Viewport.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="68" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -32,26 +50,46 @@
       <file leaf-file-name="StudyResource.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StudyResource.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.0357144">
+            <state line="10" column="74" selection-start="699" selection-end="699" vertical-scroll-proportion="-6.785714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Navigation.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StudyResource/view/Navigation.js">
+      <file leaf-file-name="StudyResource.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StudyResource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="42" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExamTab.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Exam/view/ExamTab.js">
+      <file leaf-file-name="Exam.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exam.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="42" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+            <state line="9" column="74" selection-start="562" selection-end="562" vertical-scroll-proportion="-6.107143">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exam.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exam.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="7" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exam/view/Viewport.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="67" selection-start="736" selection-end="763" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1429770991567" expanded="true" signature="974:1067" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controller/MainController.js" />
         <option value="$PROJECT_DIR$/app/view/ShortAnswerQuestionsPanel.js" />
         <option value="$PROJECT_DIR$/app/view/UncertainItem.js" />
         <option value="$PROJECT_DIR$/app/view/ExamTab.js" />
@@ -74,14 +111,15 @@
         <option value="$PROJECT_DIR$/StudyResource.js" />
         <option value="$PROJECT_DIR$/Exam/controller/MainController.js" />
         <option value="$PROJECT_DIR$/StudyResource/controller/MainController.js" />
-        <option value="$PROJECT_DIR$/StudyResource/view/Viewport.js" />
-        <option value="$PROJECT_DIR$/Exam.html" />
         <option value="$PROJECT_DIR$/Exam/view/Navigation.js" />
         <option value="$PROJECT_DIR$/Exam/view/ExamTab.js" />
-        <option value="$PROJECT_DIR$/Exam/view/Viewport.js" />
         <option value="$PROJECT_DIR$/StudyResource/view/Navigation.js" />
-        <option value="$PROJECT_DIR$/StudyResource.html" />
         <option value="$PROJECT_DIR$/resource/css/icon.css" />
+        <option value="$PROJECT_DIR$/Exam.html" />
+        <option value="$PROJECT_DIR$/Exam/view/Viewport.js" />
+        <option value="$PROJECT_DIR$/StudyResource.html" />
+        <option value="$PROJECT_DIR$/StudyResource/view/Viewport.js" />
+        <option value="$PROJECT_DIR$/resource/css/common.css" />
       </list>
     </option>
   </component>
@@ -117,6 +155,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,10 +219,6 @@
               <option name="myItemId" value="resource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -198,10 +233,27 @@
               <option name="myItemId" value="resource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,8 +291,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -315,108 +367,116 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Exam/view/ShortAnswerQuestionsPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="322" selection-end="322" vertical-scroll-proportion="0.37657657" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StudyResource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StudyResource/controller/MainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="265" selection-end="265" vertical-scroll-proportion="0.30810812" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/images/ok.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/images/ok1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="0.10815939">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exam/controller/MainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="152" selection-end="152" vertical-scroll-proportion="0.2054054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StudyResource/view/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="48" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.47927928">
-          <folding>
-            <marker date="1429712465613" expanded="true" signature="1124:1149" placeholder="..." />
-            <marker date="1429712465613" expanded="false" signature="1124:1163" placeholder="..." />
-            <marker date="1429712465613" expanded="true" signature="1346:1423" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exam/view/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="309" selection-end="309" vertical-scroll-proportion="-0.1981982">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exam/view/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="58" selection-start="547" selection-end="547" vertical-scroll-proportion="0.65045047">
-          <folding>
-            <marker date="1429713652673" expanded="true" signature="748:787" placeholder="..." />
-            <marker date="1429713652673" expanded="true" signature="952:1029" placeholder="..." />
-            <marker date="1429713652673" expanded="true" signature="1157:1250" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/images/helpBook.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/view/UncertainItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/view/UncertainItemChoicePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/view/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Exam/view/ExamTab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+        <state line="10" column="27" selection-start="267" selection-end="267" vertical-scroll-proportion="0.34234235">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StudyResource/view/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="42" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+        <state line="21" column="42" selection-start="780" selection-end="780" vertical-scroll-proportion="0.034234233">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Extjs5-min/build/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8394834">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="7" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StudyResource.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.0357144">
+        <state line="10" column="74" selection-start="699" selection-end="699" vertical-scroll-proportion="-6.785714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
+    <entry file="file://$PROJECT_DIR$/StudyResource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="327" selection-end="327" vertical-scroll-proportion="0.24684684">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="74" selection-start="562" selection-end="562" vertical-scroll-proportion="-6.107143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webide.jar!/resources/html5-schema/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="4" selection-start="1089" selection-end="1110" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/view/Viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="67" selection-start="736" selection-end="763" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1429770991567" expanded="true" signature="974:1067" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResource/view/Viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="68" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="34" selection-start="807" selection-end="807" vertical-scroll-proportion="0.38560885">
           <folding />
         </state>
       </provider>

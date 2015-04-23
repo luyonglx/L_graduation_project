@@ -34,10 +34,20 @@ Ext.define("StudyResource.view.Viewport",
 							{
 								xtype : 'panel',
 								region : 'north',
-								html : '<div style="background-color:#d6e6fa;padding: 20px;' +
-                                             ' font-size:30px; height:105px; line-height: 40px; padding-left: 20px;">' +
-                                             '<div style="background:url(resource/images/logo.png) no-repeat;width: 240px;height: 80px;">' +
-                                             '</div>' +
+								html : '<div class="com-header">' +
+                                            '<div class="logo">' +
+                                            '</div>' +
+                                            '<div class="top-linked">' +
+                                                '<a href="###">首页</a>'+
+                                                '<a href="###">知识大纲区</a>'+
+                                                '<a href="###">在线考试区</a>'+
+                                                '<a href="###">论坛</a>'+
+                                                '<a href="###">个人空间</a>'+
+                                                '<div class="log-form">' +
+                                                    '<a class="login" href="">登录</a>'+
+                                                    '<a href="">注册</a>'+
+                                                '</div>'+
+                                            '</div>'+
                                         '</div>'
 							}, {
 								xtype : 'toolbar',
