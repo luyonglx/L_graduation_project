@@ -6,24 +6,37 @@
     background: url("../images/reset.png") no-repeat;
     background-size: 100%;
 }
-/*.treeNode-textBook{*/
-    /*background: url("../images/book.jpg") no-repeat;*/
-    /*background-size: 100%;*/
-/*}*/
+.treeNode-textBook{
+    background: url("../images/book.jpg") no-repeat;
+    background-size: 100%;
+}
 .treeNode-helpBook{
     background: url("../images/helpBook.jpg") no-repeat;
     background-size: 100%;
+
+}
+.exam-icon{
+    background: url("../images/exam.jpg") no-repeat;
+    background-size: 100%;
+}
+.document-icon{
+    background: url("../images/document.jpg") no-repeat;
+    background-size: 100%;
+}
+.search-icon{
+    background: url("../images/search.jpg") no-repeat;
+    background-size: 100%;
+}
+.add-icon{
+    background: url("../images/add.jpg") no-repeat;
+    background-size: 100%;
+}
+.delete-icon{
+    background: url("../images/delete.jpg") no-repeat;
+    background-size: 100%;
+}
+.refresh-icon{
+    background: url("../images/refresh.jpg") no-repeat;
+    background-size: 100%;
 }
 
-.x-tree-node-expanded.treeNode-textBook{
-    background: url("../images/book.jpg") no-repeat;
-    background-size: 100%;
-}
-.x-tree-node-collapsed .treeNode-textBook{
-    background: url("../images/book.jpg") no-repeat;
-    background-size: 100%;
-}
-.x-tree-node-leaf  .treeNode-textBook{
-    background: url("../images/book.jpg") no-repeat;
-    background-size: 100%;
-}

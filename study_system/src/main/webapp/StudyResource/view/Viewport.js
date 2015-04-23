@@ -10,30 +10,27 @@ Ext.define("StudyResource.view.Viewport",
 							{
 								region : 'west',
                                 width:'16%',
-                                xtype:'navigation'
+                                xtype:'navigation',
+                                border:false
 
 							},
 							{
 								region : 'center',
-								xtype : 'panel',
+                                xtype:'tabpanel',
+                                border:false,
 								layout : 'fit',
 								items : [
-                                         {
-                                            title:'资料预览',
-                                             frame:true,
-                                             buttons:[
-                                                 {
-                                                     text:'确定',
-                                                     iconCls:'button-ok'
-                                                 }
-                                             ]
+                                        {
+                                              xtype:'itemFileManageTab'
 
-                                          }
+                                         }
+
                                 ]
 							},
 							{
 								xtype : 'panel',
 								region : 'north',
+                                //#d6e6fa
 								html : '<div style="background-color:#d6e6fa;padding: 20px;' +
                                              ' font-size:30px; height:105px; line-height: 40px; padding-left: 20px;">' +
                                              '<div style="background:url(resource/images/logo.png) no-repeat;width: 240px;height: 80px;">' +

@@ -29,6 +29,11 @@ public class UserController {
        return list;
     }
     
+    @RequestMapping("studyResource")
+    public String studyResource(){
+        return "StudyResource";
+    }
+    
     
      
 }

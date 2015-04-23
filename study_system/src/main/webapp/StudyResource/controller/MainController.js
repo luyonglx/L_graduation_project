@@ -7,5 +7,5 @@
  */
 Ext.define('StudyResource.controller.MainController',{
     extend:'Ext.app.Controller',
-    views:['Navigation']
+    views:['Navigation','ItemFileManageTab']
 })
