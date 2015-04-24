@@ -19,27 +19,8 @@ Ext.define("StuResource.view.Viewport",
 								layout : 'fit',
 								items : [
                                          {
-                                            title:'资料预览',
-                                             frame:true,
-                                             items:[
-                                                 {
-                                                     xtype:'button',
-                                                     text:'在线阅览'
-                                                 },
-                                                 {
-                                                     xtype:'button',
-                                                     text:'下载',
-                                                     iconCls:'download-icon'
-                                                 }
-
-                                             ],
-                                             buttons:[
-                                                 {
-                                                     text:'确定',
-                                                     iconCls:'button-ok'
-                                                 }
-                                             ]
-
+                                            //title:'资料预览',
+                                             xtype:'itemFileContentTab'
                                           }
                                 ]
 							},
