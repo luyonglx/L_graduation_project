@@ -27,10 +27,9 @@ Ext.define("E-learning.view.Viewport",
 							{
 								xtype : 'panel',
 								region : 'north',
-                                html : '<div style="background-color:#d6e6fa;padding: 20px;' +
-                                    ' font-size:30px; height:105px; line-height: 40px; padding-left: 20px;">' +
-                                    '<div style="background:url(resource/images/logo.png) no-repeat;width: 240px;height: 80px;">' +
-                                    '</div>' +
+                                html : '<div class="com-header">' +
+                                    '<div class="logo"></div>'+
+                                    '<h2>2014年普通高等学校招生全国统一考试 语文</h2>'+
                                     '</div>'
 								//html : '<div style="background-color:#d6e6fa; font-size:30px; height:45px; line-height: 40px; padding-left: 20px;">考出你的风采</div>'
 							}, {
@@ -38,7 +37,7 @@ Ext.define("E-learning.view.Viewport",
 								region : 'south',
 								ui : 'footer',
 								margin : '7 0 0 0',
-								items : [ '就绪', '->', '&copy; 2015 西南大学 ——罗谐' ]
+								items : [ '就绪', '->', '&copy;' ]
 							} ]
 
 				});

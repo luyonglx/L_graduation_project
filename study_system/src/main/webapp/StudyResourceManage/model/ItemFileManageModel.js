@@ -20,4 +20,5 @@ Ext.define('StudyResource.model.ItemFileManageModel', {
 
     ]
 
+
 });

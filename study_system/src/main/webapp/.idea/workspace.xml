@@ -18,11 +18,9 @@
     <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="webapp" />
-  </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="icon.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,13 +42,48 @@
         </entry>
       </file>
       <file leaf-file-name="ItemFileManageController.js" pinned="false" current="true" current-in-tab="true">
+=======
+      <file leaf-file-name="ItemFileManageController.js" pinned="false" current="false" current-in-tab="false">
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         <entry file="file://$PROJECT_DIR$/StudyResourceManage/controller/ItemFileManageController.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1216">
               <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
+=======
+            <state line="33" column="29" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemFileManageStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StudyResourceManage/store/ItemFileManageStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="11" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemFileManageTab.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StudyResourceManage/view/ItemFileManageTab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="42" selection-start="3037" selection-end="3037" vertical-scroll-proportion="0.34234235">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resourceData.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/resourceData.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="30" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
             </state>
           </provider>
         </entry>
@@ -65,40 +98,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controller/MainController.js" />
-        <option value="$PROJECT_DIR$/app/view/ShortAnswerQuestionsPanel.js" />
-        <option value="$PROJECT_DIR$/app/view/UncertainItem.js" />
-        <option value="$PROJECT_DIR$/app/view/ExamTab.js" />
-        <option value="$PROJECT_DIR$/app/view/Navigation.js" />
-        <option value="$PROJECT_DIR$/StudyResource.js" />
-        <option value="$PROJECT_DIR$/Exam/controller/MainController.js" />
-        <option value="$PROJECT_DIR$/Exam/view/Navigation.js" />
-        <option value="$PROJECT_DIR$/Exam/view/ExamTab.js" />
-        <option value="$PROJECT_DIR$/Exam/view/Viewport.js" />
-        <option value="$PROJECT_DIR$/StudyResource/view/Navigation.js" />
-        <option value="$PROJECT_DIR$/StudyResource/view/FileItemManageTab.js" />
+        <option value="$PROJECT_DIR$/resource/css/common.css" />
+        <option value="$PROJECT_DIR$/StudyResource/store/ResourceManuTreeStore.js" />
         <option value="$PROJECT_DIR$/StudyResource/controller/MainController.js" />
-        <option value="$PROJECT_DIR$/StudyResource.html" />
-        <option value="$PROJECT_DIR$/Exam.html" />
-        <option value="$PROJECT_DIR$/StudyResource/view/Viewport.js" />
-        <option value="$PROJECT_DIR$/StudyResource/view/ItemFileManageTab.js" />
-        <option value="$PROJECT_DIR$/resource/css/icon.css" />
-        <option value="$PROJECT_DIR$/StudyResourceManage/view/Navigation.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage/model/KeywordListModel.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage/model/ItemFileManageModel.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage/store/ItemFileManageStore.js" />
+        <option value="$PROJECT_DIR$/StudyResource/view/Navigation.js" />
+        <option value="$PROJECT_DIR$/StudyResource/store/ResourceMenuTreeStore.js" />
         <option value="$PROJECT_DIR$/StudyResourceManage/view/ItemFileManageTab.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage/controller/MainController.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage.js" />
-        <option value="$PROJECT_DIR$/StudyResourceManage.html" />
+        <option value="$PROJECT_DIR$/Exam/view/Viewport.js" />
+        <option value="$PROJECT_DIR$/StudyResourceManage/view/Viewport.js" />
+        <option value="$PROJECT_DIR$/StudyResourceManage/model/ItemFileManageModel.js" />
+        <option value="$PROJECT_DIR$/resource/css/icon.css" />
+        <option value="$PROJECT_DIR$/StudyResource/view/Viewport.js" />
+        <option value="$PROJECT_DIR$/Exam/view/SingleChoiceItem.js" />
+        <option value="$PROJECT_DIR$/Exam/view/ExamTab.js" />
         <option value="$PROJECT_DIR$/StudyResourceManage/controller/ItemFileManageController.js" />
+        <option value="$PROJECT_DIR$/StudyResourceManage/store/ItemFileManageStore.js" />
+        <option value="$PROJECT_DIR$/server/resourceData.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="-2" />
-    <option name="width" value="1376" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -115,7 +137,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -159,6 +181,10 @@
               <option name="myItemId" value="StudyResourceManage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -191,10 +217,6 @@
               <option name="myItemId" value="StudyResourceManage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -224,7 +246,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,22 +257,20 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="false" />
-    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LUYONG\git2\L_graduation_project\study_system\src\main\webapp\resource\images" />
-      <recent name="C:\Users\LUYONG\git2\L_graduation_project\study_system\src\main\webapp\StudyResource\controller" />
-      <recent name="C:\Users\LUYONG\git2\L_graduation_project\study_system\src\main\webapp\StudyResource\model" />
-      <recent name="C:\Users\LUYONG\git2\L_graduation_project\study_system\src\main\webapp\StudyResource\store" />
       <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp\resource\images" />
+      <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp\server" />
+      <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp\StudyResource" />
+      <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp\resource\images" />
+      <recent name="C:\Users\LY\git2\L_graduation_project\study_system\src\main\webapp\StudyResource\view" />
     </key>
   </component>
   <component name="RunManager">
+<<<<<<< HEAD
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -290,14 +310,18 @@
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+=======
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
       <method />
     </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0b78fc53-e9a7-48e2-a5cc-08da2c92b98e" name="Default" comment="" />
@@ -307,14 +331,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-2" y="-2" width="1376" height="744" extended-state="0" />
     <editor active="false" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26617646" sideWeight="0.6712565" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19210722" sideWeight="0.6712565" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -329,21 +357,54 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
     </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,8 +412,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
+    <entry file="file://$PROJECT_DIR$/StudyResource/store/ResourceMenuTreeStore.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1083">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
@@ -397,11 +459,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1693" max-vertical-offset="3667">
           <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+=======
+        <state line="14" column="30" selection-start="367" selection-end="367" vertical-scroll-proportion="-0.034234233">
+          <folding>
+            <element signature="e#0#153#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResource/controller/MainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="15" selection-start="83" selection-end="83" vertical-scroll-proportion="0.13693693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResource/view/Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="15" selection-start="218" selection-end="218" vertical-scroll-proportion="0.30810812">
+          <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StudyResourceManage/view/Viewport.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="988">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
         </state>
@@ -474,11 +557,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="1102">
           <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+=======
+        <state line="20" column="47" selection-start="546" selection-end="546" vertical-scroll-proportion="0.7116105">
+          <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Exam/view/Viewport.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.6518152" vertical-offset="23" max-vertical-offset="950">
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
@@ -519,11 +607,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25082508" vertical-offset="0" max-vertical-offset="1007">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+=======
+        <state line="37" column="46" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.6666667">
+          <folding>
+            <marker date="1429798064189" expanded="true" signature="974:1067" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StudyResourceManage/model/ItemFileManageModel.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
           <caret line="3" column="51" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="51" />
         </state>
@@ -561,40 +663,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18811882" vertical-offset="0" max-vertical-offset="606">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+=======
+        <state line="20" column="5" selection-start="647" selection-end="647" vertical-scroll-proportion="0.6576577">
+          <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/css/icon.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1083">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state line="42" column="52" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.4864865">
+          <folding>
+            <marker date="1429800549270" expanded="true" signature="310:397" placeholder="{...}" />
+            <marker date="1429800549270" expanded="true" signature="1085:1090" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResource/view/Viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="47" selection-start="1254" selection-end="1254" vertical-scroll-proportion="1.1639639">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StudyResourceManage/controller/TaskManageController.js">
+    <entry file="file://$PROJECT_DIR$/Exam/view/UncertainItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5721831" vertical-offset="914" max-vertical-offset="4332">
-          <caret line="125" column="56" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
+        <state line="9" column="33" selection-start="264" selection-end="264" vertical-scroll-proportion="0.30810812">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StudyResourceManage.html">
+    <entry file="file://$PROJECT_DIR$/Exam/view/ExamTab.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="399">
           <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+=======
+        <state line="18" column="9" selection-start="423" selection-end="423" vertical-scroll-proportion="0.61621624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam/view/SingleChoiceItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="24" selection-start="564" selection-end="564" vertical-scroll-proportion="0.6234234">
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StudyResourceManage/controller/ItemFileManageController.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1216">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
+=======
+        <state line="33" column="29" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/resourceData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="30" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResourceManage/store/ItemFileManageStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="11" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudyResourceManage/view/ItemFileManageTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="42" selection-start="3037" selection-end="3037" vertical-scroll-proportion="0.34234235">
+          <folding />
+>>>>>>> branch 'master' of https://github.com/luyonglx/L_graduation_project.git
         </state>
       </provider>
     </entry>

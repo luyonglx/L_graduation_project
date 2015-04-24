@@ -22,26 +22,23 @@ Ext.define("StudyResource.view.Viewport",
 								items : [
                                         {
                                               xtype:'itemFileManageTab'
-
                                          }
-
                                 ]
 							},
 							{
 								xtype : 'panel',
 								region : 'north',
                                 //#d6e6fa
-								html : '<div style="background-color:#d6e6fa;padding: 20px;' +
-                                             ' font-size:30px; height:105px; line-height: 40px; padding-left: 20px;">' +
-                                             '<div style="background:url(resource/images/logo.png) no-repeat;width: 240px;height: 80px;">' +
-                                             '</div>' +
-                                        '</div>'
+                                html : '<div class="com-header">' +
+                                    '<div class="logo"></div>'+
+                                    '<h2 class="back-end">后台管理系统</h2>'+
+                                    '</div>'
 							}, {
 								xtype : 'toolbar',
 								region : 'south',
 								ui : 'footer',
 								margin : '7 0 0 0',
-								items : [ '就绪', '->', '&copy; 2015 西南大学 ——罗谐' ]
+								items : [ '就绪', '->', '&copy;' ]
 							} ]
 
 				});
