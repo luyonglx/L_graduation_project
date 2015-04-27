@@ -5,13 +5,16 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
     extend:'Ext.app.Controller',
     models:['ItemFileManageModel'],
     stores:['ItemFileManageStore'],
-    views:['ItemFileManageTab'],
+    views:['ItemFileManageTab','AddItemFileWin'],
     init:function(){
         this.control({
-            'itemFileManageTab':{
+            'itemFileManageTab > grid':{
                 beforerender:function(){
-                    console.log(this.getStore('ItemFileManageStore'));
-                   //this.getStore('ItemFileManageStore').load();
+                    //console.log(this.getStore('ItemFileManageStore'));
+                   this.getStore('ItemFileManageStore').load();
+                },
+                edit:function(){
+                    this.getStore('ItemFileManageStore').sync();
                 }
                 //celldblclick : this.onTaskGirdCellDBClick
             },
@@ -32,8 +35,10 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
     },
     //新增按钮
     onAddBtnClick:function(){
-        //this.openWinForAddOrEdit();
-        Ext.Msg.alert('提示','新增');
+
+       // Ext.Msg.alert('提示','新增');
+        console.log(Ext.getCmp('addItemFileWin'));
+       // Ext.getCmp('addItemFileWin').show();
     },
     //删除按钮事件
     onDeleteBtnClick:function(btn){

@@ -1,6 +1,4 @@
-/**
- * Created by LUYONG on 2015/1/8.
- */
+
 Ext.define("StudyResource.view.Viewport",
 				{
 					extend : 'Ext.container.Viewport',

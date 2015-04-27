@@ -14,22 +14,22 @@ Ext.define('StudyResource.view.Navigation',{
         iconCls:'treeNode-helpBook'
          },
         {
-            xtype : 'panel',
+
             title : '试卷管理',
             iconCls:'document-icon'
         },
         {
-            xtype : 'panel',
+
             title : '用户管理',
             iconCls:'user-icon'
         },
         {
-            xtype : 'panel',
+
             title : '答卷管理',
             iconCls:'exam-icon'
         },
         {
-            xtype : 'panel',
+
             title : '题目管理',
             iconCls:'question-icon'
         }
