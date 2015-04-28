@@ -1,13 +1,23 @@
 /**
  * Created by LUYONG on 2015/4/28.
  */
-Ext.define('StudyResource.store.UserStore', {
+Ext.define('StudyResource.store.ExamStore', {
     extend: 'Ext.data.Store',
     pageSize: 20,
-    model:'StudyResource.model.UserModel',
+    fields:[
+        {name:'examPaperId',type:'int'},
+        {name:'subjectId',type:'int'},
+        {name:'creator',type:'int'},
+        {name:'valueRate',type:'float'},
+        {name:'examedCount',type:'int'},
+        {name:'CreateTime',type:'date'},
+        {name:'examPaperName',type:'string'},
+        {name:'limitTime',type:'float'}
+    ],
+    //model:'StudyResource.model.UserModel',
     proxy: {
         type: 'ajax',
-        url: 'server/userData.json',
+        url: 'server/examData.json',
         reader:'json'
 //        api: {
 //            update: 'crawler/crawlerPath/update',

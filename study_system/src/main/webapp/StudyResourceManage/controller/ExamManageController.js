@@ -1,30 +1,28 @@
 /**
  * Created by LUYONG on 2015/4/28.
  */
-Ext.define('StudyResource.controller.UserManageController', {
+Ext.define('StudyResource.controller.ExamManageController', {
     extend: 'Ext.app.Controller',
-    views: ['UserManageTab'],
-    stores: ['UserStore'],
-    models:['UserModel'],
+    views: ['ExamManageTab'],
+    stores: ['ExamStore'],
     init:function(){
         this.control({
-            'userManageTab > grid':{
+            'examManageTab > grid':{
                 beforerender:function(){
-                    //console.log(this.getStore('ItemFileManageStore'));
-                    this.getStore('UserStore').load();
+                    this.getStore('ExamStore').load();
                 },
                 edit:function(){
-                    this.getStore('UserStore').sync();
+                    this.getStore('ExamStore').sync();
                 }
                 //celldblclick : this.onTaskGirdCellDBClick
             },
-            'userManageTab button[text=查询]':{
+            'examManageTab button[text=查询]':{
                 click:this.onQueryBtnClick
             },
-            'userManageTab button[text=新增]':{
+            'examManageTab button[text=新增]':{
                 click:this.onAddBtnClick
             },
-            'userManageTab button[text=删除]':{
+            'examManageTab button[text=删除]':{
                 click:this.onDeleteBtnClick
             }
         });
