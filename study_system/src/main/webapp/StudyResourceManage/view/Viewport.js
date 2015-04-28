@@ -14,14 +14,14 @@ Ext.define("StudyResource.view.Viewport",
 							},
 							{
 								region : 'center',
-                                xtype:'tabpanel',
-                                border:false,
-								layout : 'fit',
-								items : [
-                                        {
-                                              xtype:'itemFileManageTab'
-                                         }
-                                ]
+                                xtype:'mainTab'
+//                                border:false,
+//								layout : 'fit',
+//								items : [
+//                                        {
+//                                              xtype:'mainTab'
+//                                         }
+//                                ]
 							},
 							{
 								xtype : 'panel',

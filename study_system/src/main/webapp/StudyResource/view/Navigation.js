@@ -14,7 +14,6 @@ Ext.define('StuResource.view.Navigation', {
             xtype:'panel',
             title:'资料区',
             iconCls:'document-icon',
-
             items:[
                 {
                     xtype:'treepanel',

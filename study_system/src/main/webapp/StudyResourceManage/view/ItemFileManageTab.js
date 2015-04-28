@@ -2,8 +2,10 @@
 Ext.define('StudyResource.view.ItemFileManageTab',{
     extend:'Ext.panel.Panel',
     alias:'widget.itemFileManageTab',
+    id:'itemFileManageTab',
     width:'100%',
     layout:'vbox',
+    closable:true,
     title:'资料管理',
     border:false,
     items:[

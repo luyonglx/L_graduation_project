@@ -35,7 +35,6 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
     },
     //新增按钮
     onAddBtnClick:function(){
-
        // Ext.Msg.alert('提示','新增');
         console.log(Ext.getCmp('addItemFileWin'));
        // Ext.getCmp('addItemFileWin').show();
@@ -46,19 +45,20 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
         var grid=btn.up('grid');
         var selectRows = grid.getSelectionModel().getSelection();
         var store = grid.getStore();
-        if (selectRows.length > 0) {
-            Ext.Msg.confirm('提示', '确定删除列表选中项？', function(isok) {
-                if (isok == "yes") {
-                    for (var i = 0; i < selectRows.length; i++) {
-                         store.remove(selectRows[i])
-                    }
-                    store.sync();
-                }
-            })
-        }
-        else {
+        if(selectRows.length <=0)
+        {
             Ext.Msg.alert('提示', '请选择！');
+            return;
         }
+        Ext.Msg.confirm('提示', '确定删除列表选中项？', function(isok) {
+            if (isok == "yes") {
+                for (var i = 0; i < selectRows.length; i++) {
+                    store.remove(selectRows[i])
+                }
+                store.sync();
+            }
+         })
+
     }
 
 })

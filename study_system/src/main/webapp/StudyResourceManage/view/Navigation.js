@@ -8,10 +8,16 @@ Ext.define('StudyResource.view.Navigation',{
     split : true,
     frame:true,
     title : '后台管理菜单',
-    items : [ {
-        xtype : 'panel',
-        title : '资料管理',
-        iconCls:'treeNode-helpBook'
+    items : [
+        {
+            xtype:'navigationTree',
+            iconCls:'systemSet-icon'
+        },
+         {
+            xtype : 'panel',
+            title : '资料管理',
+            name:'itmeFileManage',
+            iconCls:'treeNode-helpBook'
          },
         {
 
