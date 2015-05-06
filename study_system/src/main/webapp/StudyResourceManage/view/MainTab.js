@@ -8,9 +8,12 @@ Ext.define('StudyResource.view.MainTab', {
     width: '100%',
     border: false,
     items:[
+//        {
+//            title:'欢迎',
+//            html:'<h1>欢迎使用</h1>'
+//        },
         {
-            title:'欢迎',
-            html:'<h1>欢迎使用</h1>'
+            xtype:'questionManageTab'
         }
     ]
 });

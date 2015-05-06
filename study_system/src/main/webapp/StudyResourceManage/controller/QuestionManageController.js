@@ -3,7 +3,7 @@
  */
 Ext.define('StudyResource.controller.QuestionManageController', {
     extend: 'Ext.app.Controller',
-    views: ['QuestionManageTab'],
+    views: ['QuestionManageTab','AddQuestionWin'],
    // stores: ['AnswerSheetStore'],
     init:function(){
         this.control({
@@ -33,9 +33,8 @@ Ext.define('StudyResource.controller.QuestionManageController', {
     },
     //新增按钮
     onAddBtnClick:function(){
-
         // Ext.Msg.alert('提示','新增');
-        console.log(Ext.getCmp('addItemFileWin'));
+        Ext.widget('addQuestionWin').show();
         // Ext.getCmp('addItemFileWin').show();
     },
     //删除按钮事件

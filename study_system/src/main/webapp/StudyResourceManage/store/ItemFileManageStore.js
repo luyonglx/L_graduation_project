@@ -2,7 +2,7 @@ Ext.define('StudyResource.store.ItemFileManageStore', {
     extend: 'Ext.data.Store',
     pageSize: 20,
     model:'StudyResource.model.ItemFileManageModel',
-    autoLoad:true,
+    //autoLoad:true,
     proxy: {
         type: 'ajax',
         url: 'server/resourceData.json',

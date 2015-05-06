@@ -9,7 +9,7 @@ Ext.define('StudyResource.controller.ExamManageController', {
         this.control({
             'examManageTab > grid':{
                 beforerender:function(){
-                    this.getStore('ExamStore').load();
+                    //this.getStore('ExamStore').load();
                 },
                 edit:function(){
                     this.getStore('ExamStore').sync();

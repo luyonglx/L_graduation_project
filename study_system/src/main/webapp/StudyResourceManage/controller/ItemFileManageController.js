@@ -11,7 +11,7 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
             'itemFileManageTab > grid':{
                 beforerender:function(){
                     //console.log(this.getStore('ItemFileManageStore'));
-                   this.getStore('ItemFileManageStore').load();
+                   //this.getStore('ItemFileManageStore').load();
                 },
                 edit:function(){
                     this.getStore('ItemFileManageStore').sync();

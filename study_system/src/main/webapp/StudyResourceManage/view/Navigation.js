@@ -13,32 +13,32 @@ Ext.define('StudyResource.view.Navigation',{
             xtype:'navigationTree',
             iconCls:'systemSet-icon'
         },
-         {
-            xtype : 'panel',
-            title : '资料管理',
-            name:'itmeFileManage',
-            iconCls:'treeNode-helpBook'
-         },
-        {
-
-            title : '试卷管理',
-            iconCls:'document-icon'
-        },
-        {
-
-            title : '用户管理',
-            iconCls:'user-icon'
-        },
-        {
-
-            title : '答卷管理',
-            iconCls:'exam-icon'
-        },
-        {
-
-            title : '题目管理',
-            iconCls:'question-icon'
-        }
+//         {
+//            xtype : 'panel',
+//            title : '资料管理',
+//            name:'itmeFileManage',
+//            iconCls:'treeNode-helpBook'
+//         },
+//        {
+//
+//            title : '试卷管理',
+//            iconCls:'document-icon'
+//        },
+//        {
+//
+//            title : '用户管理',
+//            iconCls:'user-icon'
+//        },
+//        {
+//
+//            title : '答卷管理',
+//            iconCls:'exam-icon'
+//        },
+//        {
+//
+//            title : '题目管理',
+//            iconCls:'question-icon'
+//        }
 
     ]
 });

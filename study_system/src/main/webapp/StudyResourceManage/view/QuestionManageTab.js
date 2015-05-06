@@ -91,29 +91,35 @@ Ext.define('StudyResource.view.QuestionManageTab', {
             columns:[
                 {
                     header : '试题号',
-                    dataIndex : 'answerSheetId',
+                    dataIndex : 'questionId',
                     flex :1
                 },
                 {
-                    header : '用户编号',
-                    dataIndex : 'userId',
+                    header : '题目描述',
+                    dataIndex : 'questionDesc',
                     flex :1,
                     editor:new Ext.form.TextField()
                 },
                 {
-                    header : '所属试卷号',
+                    header : '所属科目',
                     editor:new Ext.form.TextField(),
-                    dataIndex : 'examPaperId',
+                    dataIndex : 'subjectId',
                     flex : 1
                 },
                 {
-                    header : '答案串号',
+                    header : '难度',
                     editor:new Ext.form.TextField(),
-                    dataIndex : 'answerIdsStr',
+                    dataIndex : 'difficulty',
                     flex : 1
                 },
                 {
-                    header : '考试时间',
+                    header : '被利用率',
+                    editor:new Ext.form.TextField(),
+                    dataIndex : 'usedRate',
+                    flex : 1
+                },
+                {
+                    header : '创建时间',
                     renderer : function(val) {
                         var d = new Date(val);
                         return Ext.util.Format.date(d, 'Y-m-d');
@@ -122,8 +128,20 @@ Ext.define('StudyResource.view.QuestionManageTab', {
                         editable:false,
                         format:'Y-m-d'
                     }),
-                    dataIndex : 'examTime',
+                    dataIndex : 'createTime',
                     flex : 1
+                },
+                {
+                    header : '题目类型',
+                    editor:new Ext.form.TextField(),
+                    dataIndex : 'questionType',
+                    flex : 1
+                },
+                {
+                    header : '题目解析',
+                    dataIndex:'QuestionAnalysis',
+                    flex:1
+
                 }
             ],
             dockedItems: [{

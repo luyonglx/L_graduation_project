@@ -1,4 +1,4 @@
-package com.graduation.pro.study_system.util;
+package com.graduation.pro.study_system.base;
 import java.util.HashMap;
 /**
  * used to integrates with ExtJS 4.x data stores.<br>
@@ -8,7 +8,7 @@ import java.util.HashMap;
  *  "{"success":false,"data":"","message":"VERBOSE ERROR"}"
  * </pre>
  * 
- * @author Xingen Wang.
+ * 
  */
 public class ExtJSResponse extends HashMap<String, Object> {
 

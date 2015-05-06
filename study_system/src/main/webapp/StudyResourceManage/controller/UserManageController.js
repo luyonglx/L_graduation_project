@@ -11,7 +11,7 @@ Ext.define('StudyResource.controller.UserManageController', {
             'userManageTab > grid':{
                 beforerender:function(){
                     //console.log(this.getStore('ItemFileManageStore'));
-                    this.getStore('UserStore').load();
+                  //  this.getStore('UserStore').load();
                 },
                 edit:function(){
                     this.getStore('UserStore').sync();

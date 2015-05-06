@@ -9,7 +9,7 @@ Ext.define('StudyResource.controller.AnswerSheetManageController', {
         this.control({
             'answerSheetManageTab > grid':{
                 beforerender:function(){
-                    this.getStore('AnswerSheetStore').load();
+                    //this.getStore('AnswerSheetStore').load();
                 },
                 edit:function(){
                     this.getStore('AnswerSheetStore').sync();
