@@ -12,7 +12,6 @@ import com.graduation.pro.study_system.pojo.Users;
 public class UserService {
 	@Autowired
 	private UsersMapper usersMapper;
-	
 	public int insertUser(Users user)
 	{
 		System.out.println("添加用户");
