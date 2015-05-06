@@ -14,7 +14,7 @@ Ext.onReady(function(){
         //指定配置选项，设置相应的路径
         appFolder: 'StudyResource',
         //加载控制器
-        controllers:['MainController'],
+        controllers:['MainController','ItemFileController'],
         //自动加载和实例化Viewport文件
         autoCreateViewport: true
     });

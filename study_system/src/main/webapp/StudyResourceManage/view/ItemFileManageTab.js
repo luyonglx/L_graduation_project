@@ -1,11 +1,11 @@
-/**
- * Created by LUYONG on 2015/4/23.
- */
+
 Ext.define('StudyResource.view.ItemFileManageTab',{
     extend:'Ext.panel.Panel',
     alias:'widget.itemFileManageTab',
+    id:'itemFileManageTab',
     width:'100%',
     layout:'vbox',
+    closable:true,
     title:'资料管理',
     border:false,
     items:[
@@ -29,6 +29,7 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     name:'itemFileName',
                     fieldLabel:'资料名',
                     editable:true
+
                 },
                 {
                     xtype:'combobox',
@@ -90,93 +91,133 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
         },
         // =======表格部分start
         {
-            xtype : 'grid',
-            width : '100%',
-            flex:8,
-            columnLines : true,
-            selType : 'checkboxmodel',
-            store : 'ItemFileManageStore',
+            xtype: 'grid',
+            width: '100%',
+            flex: 8,
+            columnLines: true,
+            selType: 'checkboxmodel',
+
+            store: 'ItemFileManageStore',
             // border: false,
-            tbar : [ {
-                text : '新增',
-                iconCls : 'add-icon'
-            }, {
-                text : '删除',
-                iconCls : 'delete-icon'
-            }, {
-                text : '刷新',
-                iconCls : 'refresh',
-                handler : function(btn) {
-                    btn.up('grid').getStore().reload();
+            tbar: [
+                {
+                    text: '新增',
+                    iconCls: 'add-icon'
+                },
+                {
+                    text: '删除',
+                    iconCls: 'delete-icon'
+                },
+                {
+                    text: '刷新',
+                    iconCls: 'refresh',
+                    handler: function (btn) {
+                        btn.up('grid').getStore().reload();
+                    }
                 }
-            }
             ],
+            plugins: [
+                Ext.create('Ext.grid.plugin.CellEditing', {
+                    clicksToEdit: 2 //设置单击单元格编辑
+                })
+            ],
+            defaults: {
+            editor: new Ext.form.TextField()
+
+            },
             columns:[
                 {
                     header : '资源编号',
                     dataIndex : 'itemFileId',
                     flex :1
+
                 },
                 {
                     header : '资源名称',
                     dataIndex : 'itemFileName',
-                    flex :1
+                    flex :1,
+                    editor:new Ext.form.TextField()
                 },
                 {
                     header : '科目类编号',
+                    editor:new Ext.form.TextField(),
                     dataIndex : 'subjectId',
                     flex : 1
                 },
                 {
                     header : '年级类编号',
+                    editor:new Ext.form.TextField(),
                     dataIndex : 'gradeId',
                     flex : 1
                 },
                 {
                     header : '对应文件名编号',
+                    editor:new Ext.form.TextField(),
                     dataIndex : 'fileId',
                     flex : 1
                 },
                 {
                     header : '查看次数',
+
                     dataIndex : 'viewCount',
                     flex :1
                 },
                 {
                     header : '等级评分',
+
                     dataIndex : 'evaluate',
                     flex : 1
                 },
                 {
                     header : '资源来源',
                     dataIndex : 'from',
+                    editor:new Ext.form.TextField(),
                     flex : 1
                 },
                 {
                     header : '作者',
                     dataIndex : 'author',
+                    editor:new Ext.form.TextField(),
                     flex : 1
                 },
 
                 {
                     header : '相关文档',
                     dataIndex : 'relateDocumentId',
+                    editor:new Ext.form.TextField(),
                     flex :1
                 },
                 {
                     header : '下载金币',
                     dataIndex : 'downloadGold',
+                    editor:new Ext.form.TextField(),
                     flex : 1
                 },
                 {
                     header : '收录日期',
                     dataIndex : 'enteringDate',
+                    renderer : function(val) {
+                        var d = new Date(val);
+                        return Ext.util.Format.date(d, 'Y-m-d');
+                    },
+                    editor:new Ext.form.field.Date({
+                        editable:false,
+                        format:'Y-m-d'
+                    }),
                     flex : 1
+
                 },
                 {
                     header : '板块',
                     dataIndex : 'sectionId',
+                    editor:new Ext.form.TextField(),
                     flex : 1
+                },{
+
+                    header:'详细信息',
+                    renderer:function(){
+                        return "<a href='#'>详情</a>"
+                    }
                 }
             ],
             dockedItems: [{

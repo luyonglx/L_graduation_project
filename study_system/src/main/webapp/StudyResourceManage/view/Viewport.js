@@ -1,6 +1,4 @@
-/**
- * Created by LUYONG on 2015/1/8.
- */
+
 Ext.define("StudyResource.view.Viewport",
 				{
 					extend : 'Ext.container.Viewport',
@@ -16,14 +14,14 @@ Ext.define("StudyResource.view.Viewport",
 							},
 							{
 								region : 'center',
-                                xtype:'tabpanel',
-                                border:false,
-								layout : 'fit',
-								items : [
-                                        {
-                                              xtype:'itemFileManageTab'
-                                         }
-                                ]
+                                xtype:'mainTab'
+//                                border:false,
+//								layout : 'fit',
+//								items : [
+//                                        {
+//                                              xtype:'mainTab'
+//                                         }
+//                                ]
 							},
 							{
 								xtype : 'panel',
