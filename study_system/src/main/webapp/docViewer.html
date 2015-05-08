@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html>
+<head>
+<title>FlexPaper AdaptiveUI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="initial-scale=1,user-scalable=0,width=device-width" />
+<style type="text/css" media="screen">
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+#flashContent {
+	display: none;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="flexPaper/css/flexpaper.css?r=141205" />
+<script type="text/javascript" src="flexPaper/js/jquery.min.js?r=141205"></script>
+<script type="text/javascript" src="flexPaper/js/flexpaper.js?r=141205"></script>
+</head>
+<body>
+	<div id="documentViewer" class="flexpaper_viewer"
+		style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%">文档加载中...</div>
+	<script type="text/javascript">   
+    	$('#documentViewer').FlexPaperViewer(
+        	{ config : {
+						 SWFFile : 'docs/yuwen.swf',
+				         //IMGFiles : 'samples/WhitePaper_sample.pdf_{page}.jpg',
+				         //JSONFile : 'samples/WhitePaper_sample.pdf_{page}.js',
+				         //PDFFile : 'docs/test.pdf',
+						 //PDFFile : 'samples/WhitePaper_sample.pdf',
+				         //ThumbIMGFiles : 'samples/WhitePaper_sample.pdf_{page}_thumb.jpg',
+
+						 key : '$659bda0e09811de23c6',
+						 Scale : 1, 
+						 ZoomTransition : 'easeOut',
+						 ZoomTime : 0.5, 
+						 ZoomInterval : 0.2,
+						 FitPageOnLoad : false,
+						 FitWidthOnLoad : false, 
+						 FullScreenAsMaxWindow : false,
+						 ProgressiveLoading : true,
+						 MinZoomSize : 0.2,
+						 MaxZoomSize : 5,
+						 SearchMatchAll : false,
+                         //Toolbar : toolbarData,
+						 InitViewMode : 'Portrait',
+						 //RenderingOrder : 'flash',
+						 
+						 ViewModeToolsVisible : true,
+						 ZoomToolsVisible : true,
+						 NavToolsVisible : true,
+						 CursorToolsVisible : true,
+						 SearchToolsVisible : true,
+  						
+  						 localeChain: 'zh_CN'
+					}}
+               	);
+	        </script>
+
+</body>
+</html>

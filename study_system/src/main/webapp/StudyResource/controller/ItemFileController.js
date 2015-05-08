@@ -7,6 +7,6 @@
  */
 Ext.define('StuResource.controller.ItemFileController',{
     extend:'Ext.app.Controller',
-    views:['ItemFileContentTab','ItemFileView']
+    views:['ItemFileContentTab','ItemFileView','ItemFileViewer']
    // stores:['ResourceMenuTreeStore']
 })

@@ -15,14 +15,14 @@ Ext.define("StuResource.view.Viewport",
 							},
 							{
 								region : 'center',
-								xtype : 'panel',
-								layout : 'fit',
-								items : [
-                                         {
-                                            //title:'资料预览',
-                                             xtype:'itemFileContentTab'
-                                          }
-                                ]
+								xtype : 'mainTab'
+//								layout : 'fit',
+//								items : [
+//                                         {
+//                                            //title:'资料预览',
+//                                             xtype:'MainTab'
+//                                          }
+//                                ]
 							},
 							{
 								xtype : 'panel',

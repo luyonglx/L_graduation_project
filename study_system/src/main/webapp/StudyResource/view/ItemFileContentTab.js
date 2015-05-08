@@ -14,5 +14,6 @@ Ext.define('StuResource.view.ItemFileContentTab',{
           xtype:'itemFileView'
 
         }
+
     ]
 });
