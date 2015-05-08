@@ -1,6 +1,8 @@
 /**
  * Created by LUYONG on 2015/4/28.
  */
+var subjectStore=Ext.create('StudyResource.store.SubjectStore');
+subjectStore.load();
 Ext.define('StudyResource.view.QuestionManageTab', {
     extend: 'Ext.panel.Panel',
     alias: 'widget.questionManageTab',
@@ -29,22 +31,33 @@ Ext.define('StudyResource.view.QuestionManageTab', {
                 {
                     xtype:'textfield',
                     name:'questionId' ,
+                    regex:/^\d+$/,
                     fieldLabel:'试题编号'
                 },
                 {
-                    xtype:'textfield',
+                    xtype:'combobox',
+                    store:'SubjectStore',
+                    valueField:'subjectId',
+                    displayField:'subjectName',
                     name:'subjectId',
+                    editable:false,
                     fieldLabel:'所属科目'
                 },
                 {
                     xtype:'textfield',
                     name:'difficulty',
+                    regex:/^\d+$/,
                     fieldLabel:'难度'
                 },
                 {
-                    xtype:'textfield',
+                    xtype:'combobox',
                     name:'questionType',
-                    fieldLabel:'题目类型'
+                    allowBlank:false,
+                    fieldLabel:'题目类型',
+                    store:'QuestionTypeStore',
+                    valueField:'value',
+                    displayField:'name',
+                    editable:false
                 },
                 {
                     xtype:'button',
@@ -52,6 +65,7 @@ Ext.define('StudyResource.view.QuestionManageTab', {
                     text:'查询',
                     iconCls:'search-icon'
                 }
+
             ]
         },
         // =======表格部分start
@@ -61,7 +75,7 @@ Ext.define('StudyResource.view.QuestionManageTab', {
             flex: 8,
             columnLines: true,
             selType: 'checkboxmodel',
-           // store: 'AnswerSheetStore',
+            store: 'QuestionStore',
             tbar: [
                 {
                     text: '新增',
@@ -86,7 +100,6 @@ Ext.define('StudyResource.view.QuestionManageTab', {
             ],
             defaults: {
                 editor: new Ext.form.TextField()
-
             },
             columns:[
                 {
@@ -97,24 +110,37 @@ Ext.define('StudyResource.view.QuestionManageTab', {
                 {
                     header : '题目描述',
                     dataIndex : 'questionDesc',
-                    flex :1,
+                    flex :2,
                     editor:new Ext.form.TextField()
                 },
                 {
                     header : '所属科目',
-                    editor:new Ext.form.TextField(),
                     dataIndex : 'subjectId',
+                    editor:new Ext.form.field.ComboBox({
+                        store:subjectStore,
+                        valueField:'subjectId',
+                        displayField:'subjectName',
+                        editable:false
+                    }),
+                    renderer:function(val){
+                    	var record=subjectStore.findRecord('subjectId',val);
+                        if(record)
+                            return record.get('subjectName')
+                        else
+                            return '';
+                    },
                     flex : 1
                 },
                 {
                     header : '难度',
-                    editor:new Ext.form.TextField(),
+                    editor:new Ext.form.TextField({
+                        regex:/^\d+$/
+                    }),
                     dataIndex : 'difficulty',
                     flex : 1
                 },
                 {
                     header : '被利用率',
-                    editor:new Ext.form.TextField(),
                     dataIndex : 'usedRate',
                     flex : 1
                 },
@@ -139,15 +165,16 @@ Ext.define('StudyResource.view.QuestionManageTab', {
                 },
                 {
                     header : '题目解析',
-                    dataIndex:'QuestionAnalysis',
-                    flex:1
+                    editor:new Ext.form.TextField(),
+                    dataIndex:'questionAnalysis',
+                    flex:2
 
                 }
             ],
             dockedItems: [{
                 xtype: 'pagingtoolbar',
-               // store: 'AnswerSheetStore',   // GridPanel中使用的数据
-                pageSize:25,
+                store: 'QuestionStore',   // GridPanel中使用的数据
+                pageSize:20,
                 dock: 'bottom',
                 displayInfo: true
             }]

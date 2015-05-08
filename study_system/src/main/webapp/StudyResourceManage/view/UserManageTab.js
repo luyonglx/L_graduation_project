@@ -136,7 +136,6 @@ Ext.define('StudyResource.view.UserManageTab', {
                 {
                     header : '在读年级',
                     editor:new Ext.form.TextField(),
-                    editor:new Ext.form.TextField(),
                     dataIndex : 'gradeId',
                     flex : 1
                 },

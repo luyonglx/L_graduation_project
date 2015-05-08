@@ -27,9 +27,9 @@ public class UserController {
     public @ResponseBody ExtJSResponse getUserList(){
     	ExtJSResponse resp=new ExtJSResponse();
     	UsersExample example=new UsersExample();
-    	//List<Users> list = (List<Users>) userMapper.selectByExample(example);
-    	//resp.put("data", list);
-    	return ExtJSResponse.success();
+    	List<Users> list = (List<Users>) userMapper.selectByExample(example);
+    	resp.put("data", list);
+    	return resp;
     }
     
     @RequestMapping("studyResource")

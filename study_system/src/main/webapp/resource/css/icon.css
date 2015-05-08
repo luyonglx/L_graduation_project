@@ -35,6 +35,10 @@
     background: url("../images/delete.jpg") no-repeat;
     background-size: 100%;
 }
+.del-icon{
+    background: url("../images/del.jpg") no-repeat;
+    background-size: 100%;
+}
 .refresh{
     background: url("../images/refresh1.jpg") no-repeat;
     background-size: 100%;
