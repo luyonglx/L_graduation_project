@@ -32,11 +32,11 @@
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- dao package and location -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.graduation.pro.study_system.mapper" targetProject="study_system">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.graduation.pro.study_system.mapper" targetProject="study_system/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- table name,  change tableName and domainObjectName  -->
-		<table tableName="%" > </table>
+		
 		<!--  <table tableName="address" domainObjectName="Address"> </table> 
 		 <table tableName="answer_sheet" domainObjectName="AnswerSheet"> </table> 
 		 <table tableName="big_question_result" domainObjectName="BigQuestionResult"> </table> 
@@ -57,8 +57,8 @@
 		 <table tableName="section" > </table>
 		
 		 <table tableName="users" > </table> -->
-		   
-		
+		  
+		 <table tableName="item_file" > </table> 
 		
 	</context>
 </generatorConfiguration>

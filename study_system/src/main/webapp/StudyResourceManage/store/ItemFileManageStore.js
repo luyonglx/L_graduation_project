@@ -5,19 +5,19 @@ Ext.define('StudyResource.store.ItemFileManageStore', {
     //autoLoad:true,
     proxy: {
         type: 'ajax',
-        url: 'server/resourceData.json',
-        reader:'json'
-//        api: {
-//            update: 'crawler/crawlerPath/update',
-//            read: 'crawler/crawlerPath/query',
-//            create: 'crawler/crawlerPath/add',
-//            destroy: 'crawler/crawlerPath/delete'
-//        },
-     //   reader: {
-         //   type: 'json'
-            //root: 'itemFiles'
-           // totalProperty: 'total',
-          //  successProperty: 'success'
-     //   }
+        url: 'itemFile/list.do',
+        reader:'json',
+        api: {
+            update: 'itemFile/update.do',
+            read: 'itemFile/listManage.do',
+            create: 'itemFile/add.do',
+            destroy: 'itemFile/delete.do'
+        },
+        reader: {
+            type: 'json',
+            root: 'data',
+           totalProperty: 'total',
+            successProperty: 'success'
+        }
     }
 });

@@ -21,9 +21,9 @@ import com.graduation.pro.study_system.mapper.QuestionChooseMapper;
 import com.graduation.pro.study_system.mapper.QuestionsMapper;
 import com.graduation.pro.study_system.pojo.QuestionChoose;
 import com.graduation.pro.study_system.pojo.QuestionChooseExample;
-import com.graduation.pro.study_system.pojo.QuestionInfo;
 import com.graduation.pro.study_system.pojo.Questions;
 import com.graduation.pro.study_system.pojo.QuestionsExample;
+import com.graduation.pro.study_system.pojo.other.QuestionInfo;
 import com.graduation.pro.study_system.util.Page;
 
 @Controller

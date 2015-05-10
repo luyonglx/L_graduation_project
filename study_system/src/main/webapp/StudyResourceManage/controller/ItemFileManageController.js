@@ -4,14 +4,20 @@
 Ext.define('StudyResource.controller.ItemFileManageController',{
     extend:'Ext.app.Controller',
     models:['ItemFileManageModel'],
-    stores:['ItemFileManageStore'],
+    stores:['ItemFileManageStore','SectionStore','GradeStore'],
     views:['ItemFileManageTab','AddItemFileWin'],
     init:function(){
         this.control({
             'itemFileManageTab > grid':{
                 beforerender:function(){
-                    //console.log(this.getStore('ItemFileManageStore'));
-                   //this.getStore('ItemFileManageStore').load();
+                    var store=this.getStore('ItemFileManageStore');
+                    store.getProxy().extraParams={
+                        sectionId:0,
+                        subjectId:0,
+                        gradeId:0,
+                        itemFileName:''
+                    };
+                    store.loadPage(1);
                 },
                 edit:function(){
                     this.getStore('ItemFileManageStore').sync();
@@ -29,15 +35,28 @@ Ext.define('StudyResource.controller.ItemFileManageController',{
             }
         });
     },
-    onQueryBtnClick:function()
+    onQueryBtnClick:function(btn)
     {
-        Ext.Msg.alert('提示','查询');
+        var form=btn.up('form');
+        var store=form.up('panel').down('grid').getStore();
+        store.getProxy().extraParams=form.getValues();
+        store.loadPage(1, {
+            callback : function(records, operation, success) {
+                if (!success) {
+                    Ext.Msg.alert('运行错误', operation.request.proxy.reader);
+                }
+            }
+        });
     },
     //新增按钮
     onAddBtnClick:function(){
        // Ext.Msg.alert('提示','新增');
-        console.log(Ext.getCmp('addItemFileWin'));
-       // Ext.getCmp('addItemFileWin').show();
+        var addItemFileWin=Ext.getCmp('addItemFileWin');
+        if(addItemFileWin)
+            return;
+        addItemFileWin=Ext.widget('addItemFileWin');
+        addItemFileWin.show()
+
     },
     //删除按钮事件
     onDeleteBtnClick:function(btn){

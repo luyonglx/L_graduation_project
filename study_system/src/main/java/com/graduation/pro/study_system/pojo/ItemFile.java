@@ -28,6 +28,12 @@ public class ItemFile implements Serializable {
 
     private Date enteringDate;
 
+    private String itemfileimg;
+
+    private String itemFileDesc;
+
+    private String itemFileSwf;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getItemFileId() {
@@ -126,6 +132,30 @@ public class ItemFile implements Serializable {
         this.enteringDate = enteringDate;
     }
 
+    public String getItemfileimg() {
+        return itemfileimg;
+    }
+
+    public void setItemfileimg(String itemfileimg) {
+        this.itemfileimg = itemfileimg == null ? null : itemfileimg.trim();
+    }
+
+    public String getItemFileDesc() {
+        return itemFileDesc;
+    }
+
+    public void setItemFileDesc(String itemFileDesc) {
+        this.itemFileDesc = itemFileDesc == null ? null : itemFileDesc.trim();
+    }
+
+    public String getItemFileSwf() {
+        return itemFileSwf;
+    }
+
+    public void setItemFileSwf(String itemFileSwf) {
+        this.itemFileSwf = itemFileSwf == null ? null : itemFileSwf.trim();
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -149,7 +179,10 @@ public class ItemFile implements Serializable {
             && (this.getResourceFrom() == null ? other.getResourceFrom() == null : this.getResourceFrom().equals(other.getResourceFrom()))
             && (this.getAuthor() == null ? other.getAuthor() == null : this.getAuthor().equals(other.getAuthor()))
             && (this.getDownloadPrice() == null ? other.getDownloadPrice() == null : this.getDownloadPrice().equals(other.getDownloadPrice()))
-            && (this.getEnteringDate() == null ? other.getEnteringDate() == null : this.getEnteringDate().equals(other.getEnteringDate()));
+            && (this.getEnteringDate() == null ? other.getEnteringDate() == null : this.getEnteringDate().equals(other.getEnteringDate()))
+            && (this.getItemfileimg() == null ? other.getItemfileimg() == null : this.getItemfileimg().equals(other.getItemfileimg()))
+            && (this.getItemFileDesc() == null ? other.getItemFileDesc() == null : this.getItemFileDesc().equals(other.getItemFileDesc()))
+            && (this.getItemFileSwf() == null ? other.getItemFileSwf() == null : this.getItemFileSwf().equals(other.getItemFileSwf()));
     }
 
     @Override
@@ -168,6 +201,9 @@ public class ItemFile implements Serializable {
         result = prime * result + ((getAuthor() == null) ? 0 : getAuthor().hashCode());
         result = prime * result + ((getDownloadPrice() == null) ? 0 : getDownloadPrice().hashCode());
         result = prime * result + ((getEnteringDate() == null) ? 0 : getEnteringDate().hashCode());
+        result = prime * result + ((getItemfileimg() == null) ? 0 : getItemfileimg().hashCode());
+        result = prime * result + ((getItemFileDesc() == null) ? 0 : getItemFileDesc().hashCode());
+        result = prime * result + ((getItemFileSwf() == null) ? 0 : getItemFileSwf().hashCode());
         return result;
     }
 }

@@ -112,7 +112,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" useGeneratedKeys="true" keyProperty="userId" parameterType="com.graduation.pro.study_system.pojo.Users" >
+  <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.Users" >
     insert into users (user_id, address_Id, grade_Id, 
       username, level, sex, 
       age, QQ, phone, email, 

@@ -108,7 +108,7 @@
   </delete>
   <insert id="insert" useGeneratedKeys="true" keyProperty="questionId" parameterType="com.graduation.pro.study_system.pojo.Questions" >
     insert into questions (question_id, subject_id, question_desc, 
-      difficulty, used_rate, create_time, 
+      difficulty, used_rate, create_time,
       question_type, Question_analysis)
     values (#{questionId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER}, #{questionDesc,jdbcType=VARCHAR}, 
       #{difficulty,jdbcType=INTEGER}, #{usedRate,jdbcType=REAL}, #{createTime,jdbcType=TIMESTAMP}, 

@@ -43,6 +43,10 @@
     background: url("../images/refresh1.jpg") no-repeat;
     background-size: 100%;
 }
+.read-icon{
+    background: url("../images/read.jpg") no-repeat;
+    background-size: 100%;
+}
 .user-icon{
     background: url("../images/user.jpg") no-repeat;
     background-size: 100%;

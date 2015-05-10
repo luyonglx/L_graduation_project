@@ -101,7 +101,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.graduation.pro.study_system.pojo.Files" >
+  <insert id="insert" useGeneratedKeys="true" keyProperty="fileId" parameterType="com.graduation.pro.study_system.pojo.Files" >
     insert into files (file_id, file_name, file_path, 
       Save_time)
     values (#{fileId,jdbcType=INTEGER}, #{fileName,jdbcType=VARCHAR}, #{filePath,jdbcType=VARCHAR}, 

@@ -16,7 +16,6 @@ body {
 	padding: 0;
 	overflow: auto;
 }
-
 #flashContent {
 	display: none;
 }
@@ -27,11 +26,16 @@ body {
 </head>
 <body>
 	<div id="documentViewer" class="flexpaper_viewer"
-		style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%">文档加载中...</div>
-	<script type="text/javascript">   
-    	$('#documentViewer').FlexPaperViewer(
+		style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%"></div>
+	<script type="text/javascript">
+        function GetItemFileSwf() {
+            var url = location.search; //获取url中"?"符后的字串
+            return url.substr(1);
+        }
+        console.log(GetItemFileSwf());
+        $('#documentViewer').FlexPaperViewer(
         	{ config : {
-						 SWFFile : 'docs/yuwen.swf',
+						 SWFFile : 'docs/'+GetItemFileSwf(),
 				         //IMGFiles : 'samples/WhitePaper_sample.pdf_{page}.jpg',
 				         //JSONFile : 'samples/WhitePaper_sample.pdf_{page}.js',
 				         //PDFFile : 'docs/test.pdf',

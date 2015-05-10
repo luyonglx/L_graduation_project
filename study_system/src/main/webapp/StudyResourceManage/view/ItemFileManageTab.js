@@ -1,4 +1,7 @@
-
+var gradeStore=Ext.create('StudyResource.store.GradeStore');
+var subjectStore=Ext.create('StudyResource.store.SubjectStore');
+var sectionStore=Ext.create('StudyResource.store.SectionStore');
+subjectStore.load();
 Ext.define('StudyResource.view.ItemFileManageTab',{
     extend:'Ext.panel.Panel',
     alias:'widget.itemFileManageTab',
@@ -29,56 +32,34 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     name:'itemFileName',
                     fieldLabel:'资料名',
                     editable:true
-
                 },
                 {
                     xtype:'combobox',
-                    name:'itemFileType',
+                    name:'sectionId',
                     fieldLabel:'资料类型',
-                    value:'0',
-                    store : Ext.create('Ext.data.ArrayStore', {
-                        fields : [ 'name', 'value' ],
-                        data : [
-                            ["全部",'0'],
-                            [ "教科书", "1" ],
-                            [ "辅导书", "2" ],
-                            ["试卷","3"],
-                            ["资料","4"]
-                        ]
-                    })
+                    editable:false,
+                    store : 'SectionStore',
+                    displayField:'sectionName',
+                    valueField:'sectionId'
                 },
                 {
                     xtype:'combobox',
-                    name:'subject',
-                    value:'0',
+                    name:'subjectId',
+                    editable:false,
                     fieldLabel:'科目',
-                    store : Ext.create('Ext.data.ArrayStore', {
-                        fields : [ 'name', 'value' ],
-                        data : [
-                            ["全部",'0'],
-                            [ "语文", "1" ],
-                            [ "数学", "2" ],
-                            ["英语","3"],
-                            ["理科综合","4"],
-                            ["文科综合","4"]
-                        ]
-                    })
+                    store : 'SubjectStore',
+                    valueField:'subjectId',
+                    displayField:'subjectName'
                 },
                 {
                     xtype:'combobox',
-                    name:'grade',
+                    name:'gradeId',
                     fieldLabel:'年级',
-                    value:'0',
-                    store : Ext.create('Ext.data.ArrayStore', {
-                        fields : [ 'name', 'value' ],
-                        data : [
-                            ["全部",'0'],
-                            [ "一年级", "1" ],
-                            [ "二年级", "2" ],
-                            ["三年级","3"]
+                    store : 'GradeStore',
+                    editable:false,
+                    valueField:'gradeId',
+                    displayField:'gradeName'
 
-                        ]
-                    })
                 },
                 {
                     xtype:'button',
@@ -139,15 +120,40 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     editor:new Ext.form.TextField()
                 },
                 {
-                    header : '科目类编号',
-                    editor:new Ext.form.TextField(),
+                    header : '所属科目',
                     dataIndex : 'subjectId',
+                    editor:new Ext.form.field.ComboBox({
+                        store:subjectStore,
+                        valueField:'subjectId',
+                        displayField:'subjectName',
+                        editable:false
+                    }),
+                    renderer:function(val){
+                        var record=subjectStore.findRecord('subjectId',val);
+                        if(record)
+                            return record.get('subjectName')
+                        else
+                            return '';
+                    },
                     flex : 1
                 },
                 {
                     header : '年级类编号',
                     editor:new Ext.form.TextField(),
                     dataIndex : 'gradeId',
+                    editor:new Ext.form.field.ComboBox({
+                        store:gradeStore,
+                        valueField:'gradeId',
+                        displayField:'gradeName',
+                        editable:false
+                    }),
+                    renderer:function(val){
+                        var record=gradeStore.findRecord('gradeId',val);
+                        if(record)
+                            return record.get('gradeName')
+                        else
+                            return '';
+                    },
                     flex : 1
                 },
                 {
@@ -163,6 +169,25 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     flex :1
                 },
                 {
+                    header : '资料类型',
+
+                    dataIndex : 'sectionId',
+                    editor:new Ext.form.field.ComboBox({
+                        store:sectionStore,
+                        valueField:'sectionId',
+                        displayField:'sectionName',
+                        editable:false
+                    }),
+                    renderer:function(val){
+                        var record=sectionStore.findRecord('sectionId',val);
+                        if(record)
+                            return record.get('sectionName')
+                        else
+                            return '';
+                    },
+                    flex :1
+                },
+                {
                     header : '等级评分',
 
                     dataIndex : 'evaluate',
@@ -170,7 +195,7 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                 },
                 {
                     header : '资源来源',
-                    dataIndex : 'from',
+                    dataIndex : 'resourceFrom',
                     editor:new Ext.form.TextField(),
                     flex : 1
                 },
@@ -180,16 +205,9 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     editor:new Ext.form.TextField(),
                     flex : 1
                 },
-
-                {
-                    header : '相关文档',
-                    dataIndex : 'relateDocumentId',
-                    editor:new Ext.form.TextField(),
-                    flex :1
-                },
                 {
                     header : '下载金币',
-                    dataIndex : 'downloadGold',
+                    dataIndex : 'downloadPrice',
                     editor:new Ext.form.TextField(),
                     flex : 1
                 },
@@ -206,19 +224,20 @@ Ext.define('StudyResource.view.ItemFileManageTab',{
                     }),
                     flex : 1
 
-                },
-                {
-                    header : '板块',
-                    dataIndex : 'sectionId',
-                    editor:new Ext.form.TextField(),
-                    flex : 1
-                },{
-
-                    header:'详细信息',
-                    renderer:function(){
-                        return "<a href='#'>详情</a>"
-                    }
                 }
+//                {
+//                    header : '板块',
+//                    dataIndex : 'sectionId',
+//                    editor:new Ext.form.TextField(),
+//                    flex : 1
+//                }
+//                ,{
+//
+//                    header:'详细信息',
+//                    renderer:function(){
+//                        return "<a href='#'>详情</a>"
+//                    }
+//                }
             ],
             dockedItems: [{
                 xtype: 'pagingtoolbar',

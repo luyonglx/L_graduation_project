@@ -892,6 +892,216 @@ public class ItemFileExample {
             addCriterionForJDBCDate("entering_date not between", value1, value2, "enteringDate");
             return (Criteria) this;
         }
+
+        public Criteria andItemfileimgIsNull() {
+            addCriterion("itemFileImg is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgIsNotNull() {
+            addCriterion("itemFileImg is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgEqualTo(String value) {
+            addCriterion("itemFileImg =", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgNotEqualTo(String value) {
+            addCriterion("itemFileImg <>", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgGreaterThan(String value) {
+            addCriterion("itemFileImg >", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgGreaterThanOrEqualTo(String value) {
+            addCriterion("itemFileImg >=", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgLessThan(String value) {
+            addCriterion("itemFileImg <", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgLessThanOrEqualTo(String value) {
+            addCriterion("itemFileImg <=", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgLike(String value) {
+            addCriterion("itemFileImg like", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgNotLike(String value) {
+            addCriterion("itemFileImg not like", value, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgIn(List<String> values) {
+            addCriterion("itemFileImg in", values, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgNotIn(List<String> values) {
+            addCriterion("itemFileImg not in", values, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgBetween(String value1, String value2) {
+            addCriterion("itemFileImg between", value1, value2, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemfileimgNotBetween(String value1, String value2) {
+            addCriterion("itemFileImg not between", value1, value2, "itemfileimg");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescIsNull() {
+            addCriterion("item_file_desc is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescIsNotNull() {
+            addCriterion("item_file_desc is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescEqualTo(String value) {
+            addCriterion("item_file_desc =", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescNotEqualTo(String value) {
+            addCriterion("item_file_desc <>", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescGreaterThan(String value) {
+            addCriterion("item_file_desc >", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescGreaterThanOrEqualTo(String value) {
+            addCriterion("item_file_desc >=", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescLessThan(String value) {
+            addCriterion("item_file_desc <", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescLessThanOrEqualTo(String value) {
+            addCriterion("item_file_desc <=", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescLike(String value) {
+            addCriterion("item_file_desc like", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescNotLike(String value) {
+            addCriterion("item_file_desc not like", value, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescIn(List<String> values) {
+            addCriterion("item_file_desc in", values, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescNotIn(List<String> values) {
+            addCriterion("item_file_desc not in", values, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescBetween(String value1, String value2) {
+            addCriterion("item_file_desc between", value1, value2, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileDescNotBetween(String value1, String value2) {
+            addCriterion("item_file_desc not between", value1, value2, "itemFileDesc");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfIsNull() {
+            addCriterion("item_file_swf is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfIsNotNull() {
+            addCriterion("item_file_swf is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfEqualTo(String value) {
+            addCriterion("item_file_swf =", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfNotEqualTo(String value) {
+            addCriterion("item_file_swf <>", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfGreaterThan(String value) {
+            addCriterion("item_file_swf >", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfGreaterThanOrEqualTo(String value) {
+            addCriterion("item_file_swf >=", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfLessThan(String value) {
+            addCriterion("item_file_swf <", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfLessThanOrEqualTo(String value) {
+            addCriterion("item_file_swf <=", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfLike(String value) {
+            addCriterion("item_file_swf like", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfNotLike(String value) {
+            addCriterion("item_file_swf not like", value, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfIn(List<String> values) {
+            addCriterion("item_file_swf in", values, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfNotIn(List<String> values) {
+            addCriterion("item_file_swf not in", values, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfBetween(String value1, String value2) {
+            addCriterion("item_file_swf between", value1, value2, "itemFileSwf");
+            return (Criteria) this;
+        }
+
+        public Criteria andItemFileSwfNotBetween(String value1, String value2) {
+            addCriterion("item_file_swf not between", value1, value2, "itemFileSwf");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
@@ -912,6 +1122,21 @@ public class ItemFileExample {
 
         public Criteria andAuthorLikeInsensitive(String value) {
             addCriterion("upper(author) like", value.toUpperCase(), "author");
+            return this;
+        }
+
+        public Criteria andItemfileimgLikeInsensitive(String value) {
+            addCriterion("upper(itemFileImg) like", value.toUpperCase(), "itemfileimg");
+            return this;
+        }
+
+        public Criteria andItemFileDescLikeInsensitive(String value) {
+            addCriterion("upper(item_file_desc) like", value.toUpperCase(), "itemFileDesc");
+            return this;
+        }
+
+        public Criteria andItemFileSwfLikeInsensitive(String value) {
+            addCriterion("upper(item_file_swf) like", value.toUpperCase(), "itemFileSwf");
             return this;
         }
     }

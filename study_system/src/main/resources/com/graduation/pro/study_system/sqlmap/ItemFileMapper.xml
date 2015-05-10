@@ -14,6 +14,9 @@
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="download_price" property="downloadPrice" jdbcType="INTEGER" />
     <result column="entering_date" property="enteringDate" jdbcType="DATE" />
+    <result column="itemFileImg" property="itemfileimg" jdbcType="VARCHAR" />
+    <result column="item_file_desc" property="itemFileDesc" jdbcType="VARCHAR" />
+    <result column="item_file_swf" property="itemFileSwf" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -75,7 +78,8 @@
   </sql>
   <sql id="Base_Column_List" >
     item_file_Id, grade_Id, subject_id, file_id, section_id, item_file_name, view_count, 
-    evaluate, resource_from, author, download_price, entering_date
+    evaluate, resource_from, author, download_price, entering_date, itemFileImg, item_file_desc, 
+    item_file_swf
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.graduation.pro.study_system.pojo.ItemFileExample" >
     select
@@ -114,12 +118,14 @@
     insert into item_file (item_file_Id, grade_Id, subject_id, 
       file_id, section_id, item_file_name, 
       view_count, evaluate, resource_from, 
-      author, download_price, entering_date
+      author, download_price, entering_date, 
+      itemFileImg, item_file_desc, item_file_swf
       )
     values (#{itemFileId,jdbcType=INTEGER}, #{gradeId,jdbcType=INTEGER}, #{subjectId,jdbcType=INTEGER}, 
       #{fileId,jdbcType=INTEGER}, #{sectionId,jdbcType=INTEGER}, #{itemFileName,jdbcType=VARCHAR}, 
       #{viewCount,jdbcType=INTEGER}, #{evaluate,jdbcType=INTEGER}, #{resourceFrom,jdbcType=VARCHAR}, 
-      #{author,jdbcType=VARCHAR}, #{downloadPrice,jdbcType=INTEGER}, #{enteringDate,jdbcType=DATE}
+      #{author,jdbcType=VARCHAR}, #{downloadPrice,jdbcType=INTEGER}, #{enteringDate,jdbcType=DATE}, 
+      #{itemfileimg,jdbcType=VARCHAR}, #{itemFileDesc,jdbcType=VARCHAR}, #{itemFileSwf,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.pro.study_system.pojo.ItemFile" >
@@ -161,6 +167,15 @@
       <if test="enteringDate != null" >
         entering_date,
       </if>
+      <if test="itemfileimg != null" >
+        itemFileImg,
+      </if>
+      <if test="itemFileDesc != null" >
+        item_file_desc,
+      </if>
+      <if test="itemFileSwf != null" >
+        item_file_swf,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="itemFileId != null" >
@@ -198,6 +213,15 @@
       </if>
       <if test="enteringDate != null" >
         #{enteringDate,jdbcType=DATE},
+      </if>
+      <if test="itemfileimg != null" >
+        #{itemfileimg,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFileDesc != null" >
+        #{itemFileDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFileSwf != null" >
+        #{itemFileSwf,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -246,6 +270,15 @@
       <if test="record.enteringDate != null" >
         entering_date = #{record.enteringDate,jdbcType=DATE},
       </if>
+      <if test="record.itemfileimg != null" >
+        itemFileImg = #{record.itemfileimg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemFileDesc != null" >
+        item_file_desc = #{record.itemFileDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemFileSwf != null" >
+        item_file_swf = #{record.itemFileSwf,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -264,7 +297,10 @@
       resource_from = #{record.resourceFrom,jdbcType=VARCHAR},
       author = #{record.author,jdbcType=VARCHAR},
       download_price = #{record.downloadPrice,jdbcType=INTEGER},
-      entering_date = #{record.enteringDate,jdbcType=DATE}
+      entering_date = #{record.enteringDate,jdbcType=DATE},
+      itemFileImg = #{record.itemfileimg,jdbcType=VARCHAR},
+      item_file_desc = #{record.itemFileDesc,jdbcType=VARCHAR},
+      item_file_swf = #{record.itemFileSwf,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -305,6 +341,15 @@
       <if test="enteringDate != null" >
         entering_date = #{enteringDate,jdbcType=DATE},
       </if>
+      <if test="itemfileimg != null" >
+        itemFileImg = #{itemfileimg,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFileDesc != null" >
+        item_file_desc = #{itemFileDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFileSwf != null" >
+        item_file_swf = #{itemFileSwf,jdbcType=VARCHAR},
+      </if>
     </set>
     where item_file_Id = #{itemFileId,jdbcType=INTEGER}
   </update>
@@ -320,7 +365,10 @@
       resource_from = #{resourceFrom,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
       download_price = #{downloadPrice,jdbcType=INTEGER},
-      entering_date = #{enteringDate,jdbcType=DATE}
+      entering_date = #{enteringDate,jdbcType=DATE},
+      itemFileImg = #{itemfileimg,jdbcType=VARCHAR},
+      item_file_desc = #{itemFileDesc,jdbcType=VARCHAR},
+      item_file_swf = #{itemFileSwf,jdbcType=VARCHAR}
     where item_file_Id = #{itemFileId,jdbcType=INTEGER}
   </update>
 </mapper>

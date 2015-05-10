@@ -15,9 +15,10 @@
     <!-- 扫描controller（controller层注入） -->
    <context:component-scan base-package="com.graduation.pro.study_system.controller"/>
    <context:component-scan base-package="org.zlex.json.controller" />  
- 	<context:annotation-config />  
+   <context:annotation-config />  
 	<mvc:annotation-driven />  
    <!-- 避免IE在ajax请求时，返回json出现下载 -->
+  
    <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">    
         <property name="supportedMediaTypes">
             <list>
@@ -25,8 +26,11 @@
             </list>
         </property>
     </bean>
-     
-   <!-- 对模型视图添加前后缀 -->
-     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+    <bean id="multipartResolver"
+         class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>  
+    
+  
+    <!-- 对模型视图添加前后缀 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
       p:prefix="/" p:suffix=".html"/>
 </beans>
