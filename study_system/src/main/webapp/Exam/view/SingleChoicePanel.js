@@ -19,13 +19,8 @@ Ext.define('E-learning.view.SingleChoicePanel',{
             name:'singleChoiceItemAreaLeft',
             width:'50%'
             //height:'100%'
-        },
-        {
-            xtype:'singleChoiceItemArea',
-            name:'singleChoiceItemAreaRight',
-            width:'50%'
-            //height:'100%'
         }
+
 
     ]
 });

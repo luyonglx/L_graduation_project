@@ -124,8 +124,6 @@ public class ItemFileController {
 			e.printStackTrace();
 		}
 		//保存itemFile
-		
-		
 		//itemFileMapper.insert(itemFile);
 		return ExtJSResponse.success();
 	}

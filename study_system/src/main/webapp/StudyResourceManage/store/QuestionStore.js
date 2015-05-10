@@ -11,6 +11,7 @@ Ext.define('StudyResource.store.QuestionStore', {
         {name:'questionType',type:'string'},
         {name:'questionAnalysis',type:'string'}
     ],
+
     //model:'StudyResource.model.UserModel',
     proxy: {
         type: 'ajax',

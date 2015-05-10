@@ -17,6 +17,7 @@ public class GradeController {
 	public @ResponseBody ExtJSResponse list()
 	{
 		GradeExample example=new GradeExample();
+		
 		return ExtJSResponse.successResWithData(gradeMapper.selectByExample(example));
 		
 	}

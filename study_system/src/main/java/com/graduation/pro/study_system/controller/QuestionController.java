@@ -66,6 +66,21 @@ public class QuestionController {
 		return response;
 	}
 	/**
+	 * 查询
+	 * @return
+	 */
+	@RequestMapping(value="/listExam", method = RequestMethod.GET)
+	public @ResponseBody ExtJSResponse listExam(
+			){
+		System.out.println("拿数据");
+		ExtJSResponse response=new ExtJSResponse();
+		QuestionsExample example=new QuestionsExample();
+		//QuestionsExample.Criteria criteria=example.createCriteria();
+		List<Questions> questionList=questionMapper.selectByExample(example);
+		response.put("data", questionList);
+		return response;
+	}
+	/**
 	 * 更新
 	 */
 	@RequestMapping("/update")
