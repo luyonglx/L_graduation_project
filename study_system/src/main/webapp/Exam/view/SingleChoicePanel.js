@@ -9,6 +9,7 @@ Ext.define('E-learning.view.SingleChoicePanel',{
     extend:'Ext.panel.Panel',
     title:'单选题',
     alias:'widget.singleChoicePanel',
+    name:'singleChoicePanel',
     //autoScroll:true,
     bodyStyle :'overflow-x:hidden;overflow-y:scroll;',
     layout:'hbox',

@@ -156,19 +156,15 @@ Ext.define('Mgr.controller.TaskManageController',{
  			url :url ,
  			method : 'POST',
  			params : param,
- 			success :function(response, options){
- 				var retObj = Ext.JSON.decode(response.responseText);
- 				if (retObj.msg) {
- 					grid.getStore().reload();
- 					executeStore.reload();
- 					Ext.MessageBox.alert('提示', retObj.msg);
- 				} 
- 			},
- 			failure : function(response, options) {
- 				var retObj = Ext.JSON.decode(response.responseText);
- 				Ext.MessageBox.alert('运行错误', retObj.error);
- 			}
- 		})
+             success : function(form, action) {
+                 var rightRate=action.result.rightRate;
+                 Ext.Msg.alert('正确率',rightRate);
+             },
+             failure : function(form,action) {
+                 var flag=action.result.msg;
+                 Ext.Msg.alert('操作', flag);
+             }
+         })
     },
     //执行按钮事件
     onExecuteBtnClick:function(btn){

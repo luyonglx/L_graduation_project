@@ -18,9 +18,7 @@ Ext.define('E-learning.store.QuestionChooseStore', {
     proxy: {
         type: 'ajax',
         url: 'questionChoose/list.do',
-        extraParams:{
-            questionId:0
-        },
+
 //        api: {
 //
 //            read: 'question/list.do',
