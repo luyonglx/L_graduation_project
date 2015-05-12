@@ -3,7 +3,7 @@
  */
 Ext.define('StudyResource.controller.UserManageController', {
     extend: 'Ext.app.Controller',
-    views: ['UserManageTab'],
+    views: ['UserManageTab','AddUserWin'],
     stores: ['UserStore'],
     models:['UserModel'],
     init:function(){
@@ -26,7 +26,19 @@ Ext.define('StudyResource.controller.UserManageController', {
             },
             'userManageTab button[text=删除]':{
                 click:this.onDeleteBtnClick
+            },
+            'addUserWin > form button[text=提交]':{
+                click:this.onSubmitBtnClick
             }
+
+        });
+    },
+    onSubmitBtnClick:function(btn){
+        var form=btn.up('form');
+        form.getForm().jsonSubmit = true;
+        form.submit({
+            url:'userManage/add.do',
+            method:'POST'
         });
     },
     onQueryBtnClick:function()
@@ -35,9 +47,9 @@ Ext.define('StudyResource.controller.UserManageController', {
     },
     //新增按钮
     onAddBtnClick:function(){
-
         // Ext.Msg.alert('提示','新增');
-        console.log(Ext.getCmp('addItemFileWin'));
+        Ext.widget('addUserWin').show();
+        //console.log(Ext.getCmp('addItemFileWin'));
         // Ext.getCmp('addItemFileWin').show();
     },
     //删除按钮事件

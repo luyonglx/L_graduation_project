@@ -111,7 +111,7 @@ Ext.define('StudyResource.view.UserManageTab', {
                 },
                 {
                     header : 'QQ',
-                    dataIndex : 'QQ',
+                    dataIndex : 'qq',
                     editor:new Ext.form.TextField(),
                     flex :1.5
                 },
