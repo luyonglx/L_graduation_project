@@ -6,6 +6,14 @@
     background: url("../images/reset.png") no-repeat;
     background-size: 100%;
 }
+.enter-icon{
+    background: url("../images/enter.jpg") no-repeat;
+    background-size: 100%;
+}
+.exit-icon{
+    background: url("../images/exit1.jpg") no-repeat;
+    background-size: 100%;
+}
 .treeNode-textBook{
     background: url("../images/book.jpg") no-repeat;
     background-size: 100%;

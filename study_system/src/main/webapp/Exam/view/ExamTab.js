@@ -9,7 +9,7 @@ Ext.define('E-learning.view.ExamTab',{
     extend:'Ext.form.Panel',
     //title:'考卷',
     alias:'widget.examTab',
-    frame:true,
+    //frame:true,
     layout: {
         // layout-specific configs go here
         type: 'accordion'
@@ -19,6 +19,7 @@ Ext.define('E-learning.view.ExamTab',{
         {
             xtype:'button',
            iconCls:'button-ok',
+            formBind:true,
            text:'提交'
         },
         {
@@ -29,6 +30,15 @@ Ext.define('E-learning.view.ExamTab',{
             {
                 btn.up('form').getForm().reset();
             }
+        },
+        {
+            xtype:'button',
+            iconCls:'exit-icon',
+            text:'退出',
+            handler:function(btn)
+            {
+                location.reload()
+            }
         }
     ],
     items:[
@@ -37,17 +47,17 @@ Ext.define('E-learning.view.ExamTab',{
             width:'100%',
             border:false
         }
-        ,
-        {
-            xtype:'uncertainItemChoicePanel',
-            width:'100%',
-            border:false
-        },
-        {
-            xtype:'shortAnswerQuestionsPanel',
-            width:'100%',
-            border:1
-        }
+        //,
+        //{
+        //    xtype:'uncertainItemChoicePanel',
+        //    width:'100%',
+        //    border:false
+        //},
+        //{
+        //    xtype:'shortAnswerQuestionsPanel',
+        //    width:'100%',
+        //    border:1
+        //}
     ]
 
 

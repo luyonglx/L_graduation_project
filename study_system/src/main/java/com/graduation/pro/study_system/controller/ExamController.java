@@ -1,5 +1,6 @@
 package com.graduation.pro.study_system.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class ExamController {
 		List<QuestionAndOption> answerOptionList=answerSheetInfo.getAnswerOptionList();
 		int questionCount=answerOptionList.size();
 		int rightCount=0;
+		List<Integer> falseAnswerList=new ArrayList();
 		for(QuestionAndOption qAO:answerOptionList)
 		{
 			QuestionChooseExample example=new QuestionChooseExample();
@@ -40,9 +42,12 @@ public class ExamController {
 									.andOptionStatusEqualTo(1);
 			if(qAO.getOptionId()==questionChooseMapper.selectByExample(example).get(0).getOptionId())
 				rightCount++;
+			else
+				falseAnswerList.add(qAO.getQuestionId());
 		}
 		double rightRate=rightCount/questionCount;
 		resp.put("rightRate", rightCount+"/"+questionCount);
+		resp.put("falseAnswerList",falseAnswerList);
 		resp.setSuccess(true);
 		return resp;
 	}
