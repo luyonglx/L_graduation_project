@@ -4,6 +4,7 @@
 Ext.define('E-learning.store.ExamStore', {
     extend: 'Ext.data.Store',
     pageSize: 20,
+    autoLoad:true,
     fields:[
         {name:'examPaperId',type:'int'},
         {name:'subjectId',type:'int'},
