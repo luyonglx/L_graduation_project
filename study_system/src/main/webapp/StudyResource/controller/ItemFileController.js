@@ -65,7 +65,7 @@ Ext.define('StuResource.controller.ItemFileController',{
                 hidden:true
             });
             //设置封面
-          
+
             var itemFileImgField=new Ext.Component({
                 flex:1.2,
                 //height:'100%',
