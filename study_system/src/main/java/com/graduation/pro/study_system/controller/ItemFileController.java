@@ -97,11 +97,10 @@ public class ItemFileController {
 	    @RequestParam("uploadFile") MultipartFile uploadFile){
 		
 		String fileName=uploadFile.getOriginalFilename();
-		  File targetFile = new File("F:/documents/", fileName);  
-	        if(!targetFile.exists()){  
-	            targetFile.mkdirs();  
-	        }  
-		
+		File targetFile = new File("F:/documents/", fileName);  
+	    if(!targetFile.exists()){  
+	       targetFile.mkdirs();  
+	     }  
 		//保存文件到服务器
 		try {
 			uploadFile.transferTo(targetFile);

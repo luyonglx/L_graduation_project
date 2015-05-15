@@ -6,12 +6,21 @@ Ext.define('StuResource.store.ItemFileStore', {
     autoLoad:true,
     proxy: {
         type: 'ajax',
-        url: 'itemFile/list.do',
+        url: 'itemFile/listManage.do',
 //        api: {
 //            update: 'crawler/crawlerPath/update',
 //            read: 'itemFile/list.do',
 //
 //        },
+        extraParams:{
+            itemFileName:'',
+            sectionId:0,
+            gradeId:0,
+            subjectId:0
+        }
+
+
+        ,
         reader: {
             type: 'json',
             root: 'data',
