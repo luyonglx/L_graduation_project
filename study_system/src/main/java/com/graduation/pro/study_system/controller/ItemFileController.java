@@ -97,9 +97,14 @@ public class ItemFileController {
 	    @RequestParam("uploadFile") MultipartFile uploadFile){
 		
 		String fileName=uploadFile.getOriginalFilename();
+		  File targetFile = new File("F:/documents/", fileName);  
+	        if(!targetFile.exists()){  
+	            targetFile.mkdirs();  
+	        }  
+		
 		//保存文件到服务器
 		try {
-			saveFile(uploadFile.getInputStream(),"F:/documents/",fileName);
+			uploadFile.transferTo(targetFile);
 		    //保存文件信息到数据库
 			Files theFile=new Files();
 		    theFile.setFileName(fileName);
@@ -117,6 +122,8 @@ public class ItemFileController {
 		    itemFile.setItemFileDesc(itemFileDesc);		
 		    itemFile.setSectionId(Integer.parseInt(sectionId));
 		    itemFile.setFileId(theFile.getFileId());
+		    itemFile.setItemFileSwf("yuwen.swf");
+		    itemFile.setItemfileimg("yuwen.jpg");
 		    itemFileMapper.insert(itemFile);
 		
 		} catch (IOException e) {
@@ -127,25 +134,7 @@ public class ItemFileController {
 		//itemFileMapper.insert(itemFile);
 		return ExtJSResponse.success();
 	}
-	
-	
-	public void saveFile(InputStream stream,String path,String filename) throws IOException
-	{
-		 FileOutputStream fs=new FileOutputStream(path+filename); 
-	       byte[]  buffer=new byte[1024*1024];
-	       int bytesum = 0;     
-	          int byteread = 0;  
-	            while ((byteread=stream.read())!=-1) 
-	            { 
-	                bytesum+=byteread; 
-	                  fs.write(buffer,0,byteread);     
-	                  fs.flush();     
-	            } 
-	            fs.close();     
-	            stream.close(); 
-		
-	}
-	
+
     @RequestMapping("/download")    
 	public ResponseEntity<byte[]> download(String itemFileId) throws IOException {  
 		    System.out.println("下载");

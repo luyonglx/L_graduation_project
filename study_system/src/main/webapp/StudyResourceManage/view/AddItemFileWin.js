@@ -18,6 +18,7 @@ Ext.define('StudyResource.view.AddItemFileWin',{
                     formBind:true,
                     iconCls:'button-ok',
                     handler: function(btn) {
+                        var win=btn.up('form').up('window');
                         var form = btn.up('form').getForm();
                         if(form.isValid()){ // form 验证
                             form.submit({ // 提交
@@ -25,6 +26,8 @@ Ext.define('StudyResource.view.AddItemFileWin',{
                                 waitMsg: '正在提交...',
                                 success: function(fp, o) {
                                     Ext.Msg.alert('上传成功', '您的文件成功的保存服务器上...');
+                                    win.close();
+
                                 }
                             });
                         }
