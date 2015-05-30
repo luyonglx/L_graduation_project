@@ -20,7 +20,6 @@ Ext.define('StudyResource.model.ItemFileManageModel', {
         {name:'itemFileDesc',type:'string'},
         {name:'itemFileSwf',type:'string'}
 
-
     ]
 
 
