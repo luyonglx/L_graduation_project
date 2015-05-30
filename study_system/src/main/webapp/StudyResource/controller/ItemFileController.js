@@ -15,6 +15,7 @@ Ext.define('StuResource.controller.ItemFileController',{
             'itemFileContentTab':{
                 beforerender:function(tab){
                     var store=this.getStore('ItemFileStore');
+                    store.load();
                     var view=tab.down('panel[name=itemFilesPanel]');
                     this.initItemFileContentTab(view,store);
 
