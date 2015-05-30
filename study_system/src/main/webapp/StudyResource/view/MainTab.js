@@ -10,7 +10,7 @@ Ext.define('StuResource.view.MainTab', {
 
     border: false,
     items:[
-       
+
         {
             xtype:'itemFileContentTab'
         }
